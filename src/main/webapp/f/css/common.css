@@ -150,6 +150,7 @@ button,html [type=button], [type=reset], [type=submit] {
     border: 1px solid var(--border-color);
 }
 
+
 .generic-input:focus {
     border: 1px solid var(--warning-color);
     outline: none;
