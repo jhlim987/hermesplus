@@ -1,11 +1,14 @@
 
 
-.login-page-container {
-    margin: 50px auto;
-    background-color: aliceblue;
-
+.page-container {
+	max-width: 100%;
+	margin: 20px auto;
 }
-
+.page-container .login-page-container {
+	max-width: 100%;
+	margin:0;
+	padding:24px;
+}
 
 
 .login-page-container {
