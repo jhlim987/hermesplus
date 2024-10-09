@@ -17,22 +17,22 @@
     <meta name="author" content="phoenixcoded" />
 
     <!-- [Favicon] icon -->
-    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/x-icon" />
 	<!-- [Google Font : Public Sans] icon -->
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<!-- map-vector css -->
-    <link rel="stylesheet" href="../assets/css/plugins/jsvectormap.min.css">	
+    <link rel="stylesheet" href="/assets/css/plugins/jsvectormap.min.css">	
 	<!-- [Tabler Icons] https://tablericons.com -->
-	<link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" >
+	<link rel="stylesheet" href="/assets/fonts/tabler-icons.min.css" >
 	<!-- [Feather Icons] https://feathericons.com -->
-	<link rel="stylesheet" href="../assets/fonts/feather.css" >
+	<link rel="stylesheet" href="/assets/fonts/feather.css" >
 	<!-- [Font Awesome Icons] https://fontawesome.com/icons -->
-	<link rel="stylesheet" href="../assets/fonts/fontawesome.css" >
+	<link rel="stylesheet" href="/assets/fonts/fontawesome.css" >
 	<!-- [Material Icons] https://fonts.google.com/icons -->
-	<link rel="stylesheet" href="../assets/fonts/material.css" >
+	<link rel="stylesheet" href="/assets/fonts/material.css" >
 	<!-- [Template CSS Files] -->
-	<link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" >
-	<link rel="stylesheet" href="../assets/css/style-preset.css" >
+	<link rel="stylesheet" href="/assets/css/style.css" id="main-style-link" >
+	<link rel="stylesheet" href="/assets/css/style-preset.css" >
   </head>
   <!-- [Head] end -->
   <!-- [Body] Start -->
@@ -48,16 +48,16 @@
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
     <div class="m-header">
-      <a href="../dashboard/index.html" class="b-brand text-primary">
+      <a href="/dashboard/index.html" class="b-brand text-primary">
         <!-- ========   Change your logo from here   ============ -->
-        <img src="../assets/images/logo-dark.svg" alt="logo image" class="logo-lg">
+        <img src="/assets/images/logo-dark.svg" alt="logo image" class="logo-lg">
         <span class="badge bg-brand-color-2 rounded-pill ms-2 theme-version">v1.0</span>
       </a>
     </div>
     <div class="navbar-content">
       <ul class="pc-navbar">
         <li class="pc-item pc-hasmenu">
-          <a href="#!" class="pc-link">
+          <a href="/admin" class="pc-link">
             <span class="pc-micon">
               <i class="ph-duotone ph-gauge"></i>
             </span>
@@ -73,7 +73,7 @@
             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
           </a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="">주문 대시보드</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/order/dashboard">주문 대시보드</a></li>
             <li class="pc-item"><a class="pc-link" href="">전체 주문 조회</a></li>
             <li class="pc-item"><a class="pc-link" href="">입금전 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">배송 준비중 관리</a></li>
@@ -162,7 +162,7 @@
       <div class="card-body">
         <div class="d-flex align-items-center">
           <div class="flex-shrink-0">
-            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
+            <img src="/assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
           </div>
           <div class="flex-grow-1 ms-3">
             <div class="dropdown">

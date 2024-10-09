@@ -11,4 +11,5 @@ public class AdminController {
 	}
 	@GetMapping("/admin/**")
 	public void goAdmin() {}
+	
 }
