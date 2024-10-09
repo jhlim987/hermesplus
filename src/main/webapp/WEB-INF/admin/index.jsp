@@ -34,13 +34,13 @@
                   <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">&#8361;10,000,000</h3>
                 </div>
                 <dl class="row text-white mt-4 mb-0">
-				  <dt class="col-sm-6">결제된 주문</dt>
-				  <dd class="col-sm-6 text-end">100건</dd>
-				  <dt class="col-sm-6">환불 (취소 및 반품)</dt>
-				  <dd class="col-sm-6 text-end">
-				    <p>10건</p>
-				  </dd>
-			  	</dl>
+								  <dt class="col-sm-6">결제된 주문</dt>
+								  <dd class="col-sm-6 text-end">100건</dd>
+								  <dt class="col-sm-6">환불 (취소 및 반품)</dt>
+								  <dd class="col-sm-6 text-end">
+								    <p>10건</p>
+								  </dd>
+						  	</dl>
               </div>
             </div>
           </div>
@@ -84,8 +84,7 @@
                     href="#"
                     data-bs-toggle="dropdown"
                     aria-haspopup="true"
-                    aria-expanded="false"
-                  >
+                    aria-expanded="false">
                     <i class="ti ti-dots-vertical f-18"></i>
                   </a>
                   <div class="dropdown-menu dropdown-menu-end">

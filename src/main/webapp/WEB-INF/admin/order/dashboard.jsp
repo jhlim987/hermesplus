@@ -36,10 +36,111 @@
 				  </div>
 				  <div class="col-sm-12">
             <div class="card table-card">
-              <div class="card-body p-4 d-flex flex-row  align-items-end">
-				  			<h4 class="mb-0 p-2 ">실시간 매출 현황</h4>
-				  			<p class="mb-0 text-gray p-2 ">최종 업데이트 일시 : 2024-10-09 14:16 (실시간 조회)</p>
-			  			</div>
+              <div class="card-body p-4 ">
+              	<div clas="d-flex flex-row  align-items-end">
+					  			<h4 class="mb-0 p-2 ">실시간 매출 현황</h4>
+					  			<p class="mb-0 text-gray p-2 ">최종 업데이트 일시 : 2024-10-09 14:16 (실시간 조회)</p>
+				  			</div>
+				  			<div class="row">
+									<table class="table col-md-12">
+										<thead>
+											<tr>
+												<th scope="col" class="text-end col-4">구분</span></th>
+												<th scope="col" class="text-end col-3">오늘</span></th>
+												<th scope="col" class="text-end col-3">이번 달</span></th>
+												<th scope="col" class="text-start col-2">바로가기</span></th>
+											</tr>
+										</thead>
+										<tbody class="table-group-divider">
+											<tr class="text-end">
+												<th scope="row">
+													<span>총 주문 금액</span>
+													<button type="button" class="badge bg-light-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="
+													총 주문 금액(건수)
+													총 주문 금액(건수)는 해당 기간 내 발생한 주문의 금액 및 건수를 집계한 현황입니다.
+													총 주문 금액에는 상품구매금액 및 배송비가 포함되어 있으며, 취소, 교환, 반품 시 반품배송비 등으로 인한 배송비 변동액도 포함하여 집계됩니다.
+													주문조회 버튼 클릭 시 [주문 > 전체 주문 조회]로 이동하여 총 주문 목록을 확인할 수 있습니다.">Info</button>
+												</th>
+												<td>
+													<div>
+														<a href="#">원</span>
+													</div>
+													<div>
+														<span>0건</span>
+													</div>
+												</td>
+												<td>
+													<div>
+														<a href="#">원</span>
+													</div>
+													<div>
+														<span>0건</span>
+													</div>
+												</td>
+												<td class="text-start"><a href="#" class="btn btn-light-primary">주문조회</a></td>
+											</tr>
+											
+											<tr class="text-end">
+												<th scope="row">
+													<span>총 실 결제 금액</span>
+													<button type="button" class="badge bg-light-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="
+													총 실 결제금액(건수)
+총 실 결제 금액(건수)는 해당 기간 내 결제완료된 금액 및 건수를 집계한 현황입니다.
+총 실 결제 금액은 총 주문 금액에서 할인 및 적립금, 예치금, 네이버 포인트 등 부가결제 금액이 차감된 금액을 의미합니다.
+이 때, 취소, 교환, 반품 시 반품배송비 등으로 인한 배송비 변동액도 포함하여 집계됩니다.
+할인, 적립금, 예치금, 네이버 포인트 등 부가결제수단으로 결제 시에도 결제건수 집계에 포함됩니다.
+결제조회 버튼 클릭 시 [주문 > 전체 주문 조회]로 이동하여 실 결제 목록을 확인할 수 있습니다.">Info</button>
+												</th>
+												<td>
+													<div>
+														<a href="#">원</span>
+													</div>
+													<div>
+														<span>0건</span>
+													</div>
+												</td>
+												<td>
+													<div>
+														<a href="#">원</span>
+													</div>
+													<div>
+														<span>0건</span>
+													</div>
+												</td>
+												<td class="text-start"><a href="#" class="btn btn-light-primary">결제조회</a></td>
+											</tr>
+											
+											<tr class="text-end">
+												<th scope="row">
+													<span>총 환불 금액</span>
+													<button type="button" class="badge bg-light-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="
+													총 환불 금액(건수)
+총 환불금액(건수)는 취소, 교환, 반품에 의해 고객에게 환불된 금액과 건수 합계 정보를 집계한 현황입니다.
+환불 금액은 실제 고객에게 환불처리된 실 환불 금액 정보를 의미합니다.
+환불조회 버튼 클릭 시 [주문 > 취소/교환/반품/환불 > 환불 관리]로 이동하여 환불 목록을 확인할 수 있습니다.">Info</button>
+												</th>
+												<td>
+													<div>
+														<a href="#">원</span>
+													</div>
+													<div>
+														<span>0건</span>
+													</div>
+												</td>
+												<td>
+													<div>
+														<a href="#">원</span>
+													</div>
+													<div>
+														<span>0건</span>
+													</div>
+												</td>
+												<td class="text-start"><a href="#" class="btn btn-light-primary">환불조회</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 		  			</div>
 	  			</div>
           <div class="col-sm-12">
