@@ -20,7 +20,8 @@
     <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
 	<!-- [Google Font : Public Sans] icon -->
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-	
+	<!-- map-vector css -->
+    <link rel="stylesheet" href="../assets/css/plugins/jsvectormap.min.css">	
 	<!-- [Tabler Icons] https://tablericons.com -->
 	<link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" >
 	<!-- [Feather Icons] https://feathericons.com -->
@@ -32,8 +33,6 @@
 	<!-- [Template CSS Files] -->
 	<link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" >
 	<link rel="stylesheet" href="../assets/css/style-preset.css" >
-	<link rel="stylesheet" href="../assets/css/style-custom.css" >
-
   </head>
   <!-- [Head] end -->
   <!-- [Body] Start -->

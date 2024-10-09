@@ -33,18 +33,14 @@
                 <div class="d-flex align-items-center mt-3">
                   <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">&#8361;10,000,000</h3>
                 </div>
-                <dl class="row">
-				  <dt class="col-sm-3">결제된 건</dt>
-				  <dd class="col-sm-9">100건</dd>
-				  <dt class="col-sm-3">환불 (취소 및 반품) 건</dt>
-				  <dd class="col-sm-9">
+                <dl class="row text-white mt-4 mb-0">
+				  <dt class="col-sm-6">결제된 주문</dt>
+				  <dd class="col-sm-6 text-end">100건</dd>
+				  <dt class="col-sm-6">환불 (취소 및 반품)</dt>
+				  <dd class="col-sm-6 text-end">
 				    <p>10건</p>
 				  </dd>
 			  	</dl>
-                <p class="text-white mb-2 text-sm mt-3"></p>
-                <p class="text-white mb-2 mt-3"></p>
-                <p class="text-white mb-2 text-sm mt-3"></p>
-                <p class="text-white mb-2 mt-3"></p>
               </div>
             </div>
           </div>
@@ -56,6 +52,10 @@
                 <div class="d-flex align-items-center mt-3">
                   <h3 class="f-w-300 d-flex align-items-center m-b-0">&#8361;20,000,000</h3>
                 </div>
+                <h5 class="mb-4 mt-4">연간 매출 현황</h5>
+                <div class="d-flex align-items-center mt-3">
+                  <h3 class="f-w-300 d-flex align-items-center m-b-0">&#8361;30,000,000</h3>
+                </div>
               </div>
             </div>
           </div>
@@ -63,38 +63,146 @@
             <div class="card statistics-card-1 overflow-hidden ">
               <div class="card-body">
                 <img src="../assets/images/widget/img-status-5.svg" alt="img" class="img-fluid img-bg" >
-                <h5 class="mb-4">연간 매출 현황</h5>
+                <h5 class="mb-4">오늘 신규 회원</h5>
                 <div class="d-flex align-items-center mt-3">
-                  <h3 class="f-w-300 d-flex align-items-center m-b-0">&#8361;30,000,000</h3>
+                  <h3 class="f-w-300 d-flex align-items-center m-b-0">100명</h3>
+                </div>
+                <h5 class="mb-4 mt-4">총 회원수</h5>
+                <div class="d-flex align-items-center mt-3">
+                  <h3 class="f-w-300 d-flex align-items-center m-b-0">30,000명</h3>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-12">
+          <div class="col-xl-6 col-md-12">
             <div class="card">
-              <div class="card-header">
-                <h5>Hello card</h5>
+              <div class="card-header d-flex align-items-center justify-content-between py-3">
+                <h5 class="mb-0">1:1 문의</h5>
+                <div class="dropdown">
+                  <a
+                    class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="ti ti-dots-vertical f-18"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="#">Today</a>
+                    <a class="dropdown-item" href="#">Weekly</a>
+                    <a class="dropdown-item" href="#">Monthly</a>
+                  </div>
+                </div>
               </div>
-              <div class="card-body">
-                <p>
-					<b>일별 매출 현황</b><br>
-						주문 갯수<br>
-						결제된 금액<br>
-						환불 (취소 및 반품) 갯수<br><br>
-					<b>회원현황</b><br>
-						신규 회원수<br>
-						총 회원수<br><br>
-					<b>게시물 현황</b><br>
-						공지사항<br>
-						1:1 문의<br>
-                </p>
-              </div>
+              <ul class="list-group list-group-flush border-top-0">
+                <li class="list-group-item">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1 me-2">
+                      <h6 class="mb-0">단추 하나만 구매 가능한가요?</h6>
+                      <p class="mt-1 mb-0"><i class="ti ti-user"></i> id-random</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <span class="badge bg-danger rounded-pill">미답변</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1 me-2">
+                      <h6 class="mb-0">하나만 반품</h6>
+                      <p class="mt-1 mb-0"><i class="ti ti-user"></i> id-random</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <span class="badge bg-success rounded-pill">답변 완료</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1 me-2">
+                      <h6 class="mb-0">채우기 텍스트 1:1 문의 게시물</h6>
+                      <p class="mt-1 mb-0"><i class="ti ti-user"></i> id-random</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <span class="badge bg-danger rounded-pill">미답변</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
+          <div class="col-xl-6 col-md-12">
+            <div class="card">
+              <div class="card-header d-flex align-items-center justify-content-between py-3">
+                <h5 class="mb-0">공지사항</h5>
+                <div class="dropdown">
+                  <a
+                    class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="ti ti-dots-vertical f-18"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="#">Today</a>
+                    <a class="dropdown-item" href="#">Weekly</a>
+                    <a class="dropdown-item" href="#">Monthly</a>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-group list-group-flush border-top-0">
+                <li class="list-group-item">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1 me-2">
+                      <h6 class="mb-0">단추 하나만 구매 가능한가요?</h6>
+                      <p class="mt-1 mb-0"><i class="ti ti-user"></i> id-random</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <span class="badge bg-danger rounded-pill">미답변</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1 me-2">
+                      <h6 class="mb-0">하나만 반품</h6>
+                      <p class="mt-1 mb-0"><i class="ti ti-user"></i> id-random</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <span class="badge bg-success rounded-pill">답변 완료</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1 me-2">
+                      <h6 class="mb-0">채우기 텍스트 1:1 문의 게시물</h6>
+                      <p class="mt-1 mb-0"><i class="ti ti-user"></i> id-random</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <span class="badge bg-danger rounded-pill">미답변</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
           <!-- [ sample-page ] end -->
         </div>
         <!-- [ Main Content ] end -->
       </div>
     </div>
     <!-- [ Main Content ] end -->
+    <!-- [Page Specific JS] start -->
+    <script src="../assets/js/plugins/apexcharts.min.js"></script>
+    <script src="../assets/js/plugins/jsvectormap.min.js"></script>
+    <script src="../assets/js/plugins/world.js"></script>
+    <script src="../assets/js/plugins/world-merc.js"></script>
+    <script src="../assets/js/pages/dashboard-default.js"></script>
+    <!-- [Page Specific JS] end -->
+    
 <%@ include file="/WEB-INF/admin/common/footer.jsp" %>

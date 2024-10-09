@@ -9,6 +9,7 @@
           <div class="col-sm-6 ms-auto my-1">
             <ul class="list-inline footer-link mb-0 justify-content-sm-end d-flex">
               <li class="list-inline-item"><a href="/admin">Home</a></li>
+              <li class="list-inline-item"><a href="https://light-able-react-light.vercel.app/">Light Able Demo</a></li>
               <li class="list-inline-item"><a href="https://www.iconfinder.com/search/icons?family=phosphor-duotone" target="_blank">Icons</a></li>
               <li class="list-inline-item"><a href="http://localhost/admin-pages/elements/bc_alert.html" target="_blank">Components</a></li>
               <li class="list-inline-item"><a href="https://pcoded.gitbook.io/light-able/" target="_blank">Documentation</a></li>
