@@ -1,16 +1,16 @@
 server:
-  port: 80
+  port: 81
 
 spring:
   application:
-    name: hermesPlus
+    name: hermesplus
   mvc:
     view:
       prefix: /WEB-INF/
       suffix: .jsp
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3307/hermesPlus
+    url: jdbc:mariadb://localhost:3307/hermesplus
     username: root
     password: r1r2r3
     hikari:
