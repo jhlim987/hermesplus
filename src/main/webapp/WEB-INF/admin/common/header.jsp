@@ -74,7 +74,7 @@
             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
           </a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="/admin/order/dashboard">주문 대시보드</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/order/order-dashboard">주문 대시보드</a></li>
             <li class="pc-item"><a class="pc-link" href="">전체 주문 조회</a></li>
             <li class="pc-item"><a class="pc-link" href="">입금전 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">배송 준비중 관리</a></li>
