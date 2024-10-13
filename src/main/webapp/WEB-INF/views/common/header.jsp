@@ -5,23 +5,8 @@
 
 <head>
    <title>SKY 에르메스 공식 온라인 매장 | Hermès - 에르메스대한민국</title>
-
-   <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon-iphone-3x.png">
-   <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-touch-icon-iphone-2x.png">
-   <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-touch-icon-ipad.png">
-   <link rel="apple-touch-icon" sizes="167x167" href="assets/images/favicon/apple-touch-icon-ipad-pro.png">
-
-   <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon/favicon-48x48.png">
-   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
-   <link rel="icon" type="image/png" sizes="144x144" href="assets/images/favicon/favicon-144x144.png">
-
-   <meta name="application-name" content="&nbsp;">
-   <meta name="msapplication-TileColor" content="#FFFFFF">
-   <meta name="msapplication-TileImage" content="assets/images/favicon/mstile-144x144.png">
-   <meta name="msapplication-square48x48logo" content="assets/images/favicon/mstile-48x48.png">
-   <meta name="msapplication-square96x96logo" content="assets/">
-
    <meta charset='utf-8'>
+   
    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
    <meta name='Title' content='Hermes paris'>
    <meta name='Subject' content='hermes website'>
@@ -58,17 +43,14 @@
    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script> <!-- 메뉴 스윽 나올때 필요함. -->
 
    <!-- reset -->
-   <link rel='stylesheet' href='./css/reset.css' />
-
-   <!-- bootstrap -->
-   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+   <link rel='stylesheet' href='/static/css/reset.css' />
 
    <!-- 로컬 CSS -->
-   <link rel='stylesheet' href='./css/style.css' />
+   <link rel='stylesheet' href='/static/css/style.css' />
 
    <!-- 로컬 js -->
-   <script src='./js/script.js' defer></script>
-   <script src='./js/main.js' defer></script>
+   <script src='/static/js/script.js' defer></script>
+   <script src='/static/js/main.js' defer></script>
 
 </head>
 
@@ -84,7 +66,7 @@
 
    <!-- 공백을 위한 공간입니다. -->
    <header id="header">
-      <!-- topnavi -->
+   		<!-- topnavi -->
       <section id="topnavi">
          <ul>
             <li><a href="#">대한민국</a></li>
@@ -114,20 +96,20 @@
                <div class="padding">
                   <h9>추천 검색</h9>
                   <ul>
-                     <li><a href="list.html">스카프, 숄과 스톨 in 여성 (509)</a></li>
-                     <li><a href="list.html">여성 (1971)</a></li>
-                     <li><a href="list.html">홈, 아웃도어, 승마 용품(1193)</a></li>
-                     <li><a href="list.html">Tournis Tresse 브레슬릿</a></li>
-                     <li><a href="list.html">로즈 에르메스, 로지 립 매트 인핸서, 로즈 아브리꼬떼</a></li>
+                     <li><a href="/views/product/list">스카프, 숄과 스톨 in 여성 (509)</a></li>
+                     <li><a href="/views/product/list">여성 (1971)</a></li>
+                     <li><a href="/views/product/list">홈, 아웃도어, 승마 용품(1193)</a></li>
+                     <li><a href="/views/product/list">Tournis Tresse 브레슬릿</a></li>
+                     <li><a href="/views/product/list">로즈 에르메스, 로지 립 매트 인핸서, 로즈 아브리꼬떼</a></li>
                   </ul>
                </div>
             </div>
          </div>
 
-         <a id="logo" class="hide-in-mobile" href="index.html">
+         <a id="logo" class="hide-in-mobile" href="/">
             <span class="hiddentext">Hermes paris</span>
          </a>
-         <a id="logo2" class="show-in-mobile" href="index.html">
+         <a id="logo2" class="show-in-mobile" href="/">
             <span class="hiddentext">Hermes paris</span>
          </a>
 
@@ -135,13 +117,13 @@
             <li>
                <button class="menubtns">
                   <i class="nav-user"></i>
-                  <a href="login.html">로그인</a>
+                  <a href="/views/user/login">로그인</a>
                </button>
             </li>
             <li>
                <button class="menubtns" id="shoppingbag" onclick='location.href="cart.html"'>
                   <i class="nav-shopping"></i>
-                  <span>장바구니</span>
+                  <a href="/views/order/cart">장바구니</a>
                </button>
             </li>
          </ul>
