@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <footer>
       <!-- 푸터 첫번째 섹션 -->
 
@@ -12,7 +11,7 @@
          <li class="m-w-100">
             <button class="footer-firstsection-title m-text-left">고객 서비스</button>
             <ul class="footer-firstsection-undernavi" data-height="320">
-               <li><a href="contact.html">문의하기</a></li>
+               <li><a href="/views/pages/contact">문의하기</a></li>
                <li><a href="#">자주묻는 질문</a></li>
                <li><a href="#">매장 찾기</a></li>
                <li><a href="#">뷰티 제품을 구매할 수 있는 매장</a></li>
@@ -25,7 +24,7 @@
          <li class="m-w-100">
             <button class="footer-firstsection-title m-text-left">온라인 스토어</button>
             <ul class="footer-firstsection-undernavi" data-height="200">
-               <li><a href="#">회원가입</a></li>
+               <li><a href="/views/user/create-account">회원가입</a></li>
                <li><a href="#">결제</a></li>
                <li><a href="#">배송</a></li>
                <li><a href="#">교환 환불 정책</a></li>
@@ -46,11 +45,11 @@
          <li class="m-w-100">
             <button class="footer-firstsection-title m-text-left">법적 고지</button>
             <ul class="footer-firstsection-undernavi" data-height="200">
-               <li><a href="legal_terms.html">이용약관</a></li>
-               <li><a href="bcr-kr.html">기업 규칙(Binding Corporate Rules)</a></li>
-               <li><a href="legal-privacy.html">개인정보처리방침 및 쿠키</a></li>
-               <li><a href="legal-issue.html">법적 고지</a></li>
-               <li><a href="legal.html">개인정보처리법 </a></li>
+               <li><a href="/views/pages/legal_terms">이용약관</a></li>
+               <li><a href="/views/pages/bcr-kr">기업 규칙(Binding Corporate Rules)</a></li>
+               <li><a href="/views/pages/legal-privacy">개인정보처리방침 및 쿠키</a></li>
+               <li><a href="/views/pages/legal-issue">법적 고지</a></li>
+               <li><a href="/views/pages/legal">개인정보처리법 </a></li>
             </ul>
 
          </li>
@@ -65,7 +64,7 @@
                   <span class="contact"> 월요일-일요일 오전 : 9:30 - 오후 8:00 (공휴일 제외) :</span>
                </p>
                <a class="call-us ng-star-inserted" href="tel:025426622">(02)542-6622</a>
-               <a class="email-us ng-star-inserted" href="contact.html">이메일 보내기</a>
+               <a class="email-us ng-star-inserted" href="/views/pages/contact">이메일 보내기</a>
             </dd>
          </dl>
          <dl id="" class="footer-card">
@@ -127,9 +126,6 @@
          </div>
       </div>
    </footer>
-   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script> -->
 </body>
 
 </html>

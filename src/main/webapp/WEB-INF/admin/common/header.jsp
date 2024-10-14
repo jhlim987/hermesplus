@@ -17,23 +17,23 @@
     <meta name="author" content="phoenixcoded" />
 
     <!-- [Favicon] icon -->
-    <link rel="icon" href="/assets/images/favicon.svg" type="image/x-icon" />
+    <link rel="icon" href="/static/assets/images/favicon.svg" type="image/x-icon" />
 	<!-- [Google Font : Public Sans] icon -->
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<!-- map-vector css -->
-    <link rel="stylesheet" href="/assets/css/plugins/jsvectormap.min.css">	
+    <link rel="stylesheet" href="/static/assets/css/plugins/jsvectormap.min.css">	
 	<!-- [Tabler Icons] https://tablericons.com -->
-	<link rel="stylesheet" href="/assets/fonts/tabler-icons.min.css" >
+	<link rel="stylesheet" href="/static/assets/fonts/tabler-icons.min.css" >
 	<!-- [Feather Icons] https://feathericons.com -->
-	<link rel="stylesheet" href="/assets/fonts/feather.css" >
+	<link rel="stylesheet" href="/static/assets/fonts/feather.css" >
 	<!-- [Font Awesome Icons] https://fontawesome.com/icons -->
-	<link rel="stylesheet" href="/assets/fonts/fontawesome.css" >
+	<link rel="stylesheet" href="/static/assets/fonts/fontawesome.css" >
 	<!-- [Material Icons] https://fonts.google.com/icons -->
-	<link rel="stylesheet" href="/assets/fonts/material.css" >
+	<link rel="stylesheet" href="/static/assets/fonts/material.css" >
 	<!-- [Template CSS Files] -->
-	<link rel="stylesheet" href="/assets/css/style.css" id="main-style-link" >
-	<link rel="stylesheet" href="/assets/css/style-preset.css" >
-	<link rel="stylesheet" href="/assets/css/style-custom.css" >
+	<link rel="stylesheet" href="/static/assets/css/style.css" id="main-style-link" >
+	<link rel="stylesheet" href="/static/assets/css/style-preset.css" >
+	<link rel="stylesheet" href="/static/assets/css/style-custom.css" >
   </head>
   <!-- [Head] end -->
   <!-- [Body] Start -->
@@ -51,7 +51,7 @@
     <div class="m-header">
       <a href="/dashboard/index.html" class="b-brand text-primary">
         <!-- ========   Change your logo from here   ============ -->
-        <img src="/assets/images/logo-dark.svg" alt="logo image" class="logo-lg">
+        <img src="/static/assets/images/logo-white.svg" alt="logo image" class="logo-lg">
         <span class="badge bg-brand-color-2 rounded-pill ms-2 theme-version">v1.0</span>
       </a>
     </div>
@@ -163,7 +163,7 @@
       <div class="card-body">
         <div class="d-flex align-items-center">
           <div class="flex-shrink-0">
-            <img src="/assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
+            <img src="/static/assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
           </div>
           <div class="flex-grow-1 ms-3">
             <div class="dropdown">
