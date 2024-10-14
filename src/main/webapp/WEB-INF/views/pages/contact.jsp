@@ -19,7 +19,7 @@
                      </g>
                   </svg>
                </div>
-               <div class="back-button-right"><a href="index.html" class=" back-text hide-in-mobile">홈으로 돌아가기</a></div>
+               <div class="back-button-right"><a href="/" class=" back-text hide-in-mobile">홈으로 돌아가기</a></div>
             </button>
          </div>
          <div class="bright-back-color">
