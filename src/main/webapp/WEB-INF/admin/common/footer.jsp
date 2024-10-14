@@ -13,7 +13,7 @@
               <li class="list-inline-item"><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a></li>
               <li class="list-inline-item"><a target="_blank" href="https://light-able-react-light.vercel.app/">Light Able Demo</a></li>
               <li class="list-inline-item"><a target="_blank" href="https://www.iconfinder.com/search/icons?family=phosphor-duotone" target="_blank">Icons</a></li>
-              <li class="list-inline-item"><a target="_blank" href="http://localhost/admin-pages/elements/bc_alert.html" target="_blank">Components</a></li>
+              <li class="list-inline-item"><a target="_blank" href="https://light-able-react-components.vercel.app/elements/bc_alert" target="_blank">Components</a></li>
               <li class="list-inline-item"><a target="_blank" href="https://pcoded.gitbook.io/light-able/" target="_blank">Documentation</a></li>
             </ul>
           </div>
