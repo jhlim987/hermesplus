@@ -93,7 +93,7 @@
             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
           </a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="">상품 대시보드</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/product/product-dashboard">상품 대시보드</a></li>
             <li class="pc-item"><a class="pc-link" href="">상품 목록</a></li>
             <li class="pc-item"><a class="pc-link" href="">상품 등록</a></li>
             <li class="pc-item"><a class="pc-link" href="">상품 관리</a></li>
@@ -112,7 +112,7 @@
             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
           </a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="">고객 대시보드</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/user/user-dashboard">고객 대시보드</a></li>
             <li class="pc-item"><a class="pc-link" href="">회원 조회</a></li>
             <li class="pc-item"><a class="pc-link" href="">회원 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">회원 탈퇴 관리</a></li>
