@@ -15,7 +15,7 @@
           <div class="row align-items-center">
             <div class="col-md-12">
               <div class="page-header-title">
-                <h2 class="mb-0">주문회원 조회</h2>
+                <h2 class="mb-0">회원 정보 조회</h2>
               </div>
             </div>
           </div>
@@ -29,8 +29,8 @@
         <div class="col-lg-4">
           <div class="card table-card">
             <div class="card-body p-4 ">
-              <label class="form-label">개인정보:</label>
-              <div class="mb-4">
+            	<div class="mb-4">
+              	<label class="form-label">개인정보:</label>
                 <select class="form-select form-select-sm mb-2 ">
                   <option>이름</option>
                   <option>아이디</option>
@@ -40,34 +40,35 @@
                 <input class="form-control form-control-sm" type="text" placeholder="">
               </div>
               <div class="mb-4">
-                <label class="form-label">회원유형:</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="memberType" id="memberTypeAll">
-                   <label class="form-check-label" for="memberTypeAll">전체</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="memberType" id="memberTypeVIP">
-                   <label class="form-check-label" for="memberTypeVIP">특별관리회원</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="memberType" id="memberTypeBlack">
-                   <label class="form-check-label" for="memberTypeBlack">불량회원</label>
-                </div>
+              	<label class="form-label">회원등급:</label>
+                <select class="form-select form-select-sm mb-2 ">
+                  <option>블랙</option>
+                  <option>실버</option>
+                  <option>골드</option>
+                  <option>다이아</option>
+                </select>
               </div>
               <div class="mb-4">
-                <label class="form-label">성별:</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="genderTypeAll">
-                  <label class="form-check-label" for="genderTypeAll">전체</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="genderTypeMale">
-                  <label class="form-check-label" for="genderTypeMale">남</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="genderTypeFemale">
-                  <label class="form-check-label" for="genderTypeFemale">여</label>
-                </div>
+                <label class="form-label">회원유형:</label><br>
+								<div class="btn-group" role="group">
+									<input type="radio" class="btn-check" id="memberTypeAll" name="memberType">
+									<label class="btn btn-outline-info" for="memberTypeAll">전체</label>
+									<input type="radio" class="btn-check" id="memberTypeVIP" name="memberType">
+									<label class="btn btn-outline-info" for="memberTypeVIP">특별관리회원</label>
+									<input type="radio" class="btn-check" id="memberTypeBlack" name="memberType">
+									<label class="btn btn-outline-info" for="memberTypeBlack">불량회원</label>
+								</div>
+							</div>
+              <div class="mb-4">
+                <label class="form-label">성별:</label><br>
+                <div class="btn-group" role="group">
+									<input type="radio" class="btn-check" id="genderTypeAll" name="gender">
+									<label class="btn btn-outline-info" for="genderTypeAll">전체</label>
+									<input type="radio" class="btn-check" id="genderTypeMale" name="gender">
+									<label class="btn btn-outline-info" for="genderTypeMale">남</label>
+									<input type="radio" class="btn-check" id="genderTypeFemale" name="gender">
+									<label class="btn btn-outline-info" for="genderTypeFemale">여</label>
+								</div>
               </div>
               <div class="mb-4">
 	              <label class="form-label">주문일 / 결제완료일:</label>
@@ -84,7 +85,7 @@
                 <label class="form-label">주문상품:</label>
                 <div class="input-group mb-3">
 								  <input type="text" class="form-control form-control-sm" disabled>
-								  <button class="btn btn-sm btn-light-primary" type="button" id="prdSearch">상품 검색</button>
+								  <button class="btn btn-sm btn-outline-info" type="button" id="prdSearch">상품 검색</button>
 								</div>
               </div>
               <div class="text-center">
@@ -96,11 +97,11 @@
         <!-- [ block1 : 회원 현황 ] end -->
         
         <!-- [ block2 : 최근 가입 회원 ] start -->
-        <div class="col-sm-8">
+        <div class="col-lg-8">
           <div class="card table-card">
             <div class="card-body p-4 ">
-              <h4 class="mb-0 p-2 ">회원 목록
-                <button type="button" class="btn btn-icon btn-light-info" data-bs-toggle="popover" 
+              <h4 class="mb-2 pt-2 ">회원 목록
+                <button type="button" class="btn btn-icon btn-link-primary avtar-xs" data-bs-toggle="popover" 
                 data-bs-title="회원 목록"  data-bs-placement="bottom" data-bs-html="true"
                 data-bs-content="
                 <ul>
@@ -113,7 +114,11 @@
                 <i class="ti ti-info-circle"></i></button>
               </h4>
               <div class="mb-2 d-flex justify-content-between align-items-center">
-                <div class="flex-grow-1">[총 회원수 1명] 검색결과 1건</div>
+                <div class="flex-grow-1">
+                	[총 회원수 1명] 검색결과 1건
+                	<button class="btn btn-icon btn-link-warning avtar-xs"><i class="ph-duotone ph-star"></i></button>특별관리회원
+                	<button class="btn btn-icon btn-link-danger avtar-xs"><i class="ph-duotone ph-warning-circle"></i></button>불량회원
+                </div>
                 <select class="form-select form-select-sm width-120px">
                   <option>10개씩 보기</option>
                   <option>20개씩 보기</option>
@@ -130,7 +135,7 @@
                 <button type="button" class="btn btn-outline-secondary btn-sm">불량회원 설정</button>
                 <button type="button" class="btn btn-outline-danger btn-sm">탈퇴 / 삭제</button>
               </div>
-              <table class="table  table-bordered">
+              <table class="table  table-bordered align-middle table-responsive">
                 <thead class="text-center">
                   <tr>
                     <th scope="col"><input type="checkbox" onclick="check_all('use_check[]', this);" class="allChk"></th>
@@ -151,17 +156,21 @@
                     <td>lorem</td>
                     <td>일반회원</td>
                     <td>01012341234</td>
-                    <td>메일 O / SMS O / 메모 O</td>
                     <td>
-	                    <button type="button" class="btn btn-outline-primary">주문</button>
-	                    <button type="button" class="btn btn-outline-primary">적립금</button>
-	                    <button type="button" class="btn btn-outline-primary">쿠폰</button>
+                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-envelope"></i></button>
+                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-messenger-logo"></i></button>
+                    	<button class="btn btn-icon btn-link-warning avtar-xs"><i class="ph-duotone ph-notepad"></i></button>
+                    </td>
+                    <td>
+	                    <button type="button" class="btn btn-outline-primary btn-sm">주문</button>
+	                    <!-- <button type="button" class="btn btn-outline-primary">적립금</button>
+	                    <button type="button" class="btn btn-outline-primary">쿠폰</button> -->
                     </td>
                   </tr>
                 </tbody>
               </table>
               <div class="no-result text-center mt-5 mb-5 visually-hidden">
-                검색된 주문 회원 내역이 없습니다.
+                검색된 회원 내역이 없습니다.
               </div>
               <div class="mb-3">
                 <button type="button" class="btn btn-outline-secondary btn-sm">불량회원 설정</button>
