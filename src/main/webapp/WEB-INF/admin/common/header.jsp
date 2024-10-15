@@ -113,8 +113,15 @@
           </a>
           <ul class="pc-submenu">
             <li class="pc-item"><a class="pc-link" href="/admin/user/user-dashboard">고객 대시보드</a></li>
-            <li class="pc-item"><a class="pc-link" href="">회원 조회</a></li>
-            <li class="pc-item"><a class="pc-link" href="">회원 관리</a></li>
+            <li class="pc-item pc-hasmenu">
+              <a class="pc-link" href="#!">회원 조회<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" href="/admin/user/member-search"       >회원 정보 조회</a></li>
+                <li class="pc-item"><a class="pc-link" href="/admin/user/order-member-search" >주문 회원 조회</a></li>
+                <li class="pc-item"><a class="pc-link" href="/admin/user/best-buyer"          >구매액 상위회원 조회</a></li>
+              </ul>
+            </li>
+						<li class="pc-item"><a class="pc-link" href="">회원 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">회원 탈퇴 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">휴면 회원 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">뉴스레터 구독자 관리</a></li>

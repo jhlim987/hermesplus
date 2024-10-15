@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+  /*
   const d_week = new Datepicker(document.querySelector('#d_week'), {
     buttonClass: 'btn',
     daysOfWeekDisabled: [0,6]
@@ -29,7 +30,7 @@
   const disp_week = new Datepicker(document.querySelector('#disp_week'), {
     buttonClass: 'btn',
     calendarWeeks: true
-  });
+  });*/
 
   const datepicker_range = new DateRangePicker(document.querySelector('#datepicker_range'), {
     buttonClass: 'btn'
