@@ -107,40 +107,42 @@
                   <option>1000개씩 보기</option>
                 </select>
               </div>
-              <table class="table  table-bordered align-middle table-responsive">
-                <thead class="text-center">
-                  <tr>
-                    <th scope="col"><input type="checkbox" onclick="check_all('use_check[]', this);" class="allChk"></th>
-                    <th scope="col">No</th>
-                    <th scope="col">최근 주문일</th>
-                    <th scope="col">이름</th>
-                    <th scope="col">아이디</th>
-                    <th scope="col">회원등급</th>
-                    <th scope="col">최근 주문번호</th>
-                    <th scope="col">총 주문 금액</th>
-                    <th scope="col">총 주문 건수</th>
-                    <th scope="col">메일/SMS/메모</th>
-                  </tr>
-                </thead>
-                <tbody class="text-center ">
-                  <tr>
-                    <td><input type="checkbox" onclick="check_all('use_check[]', this);" class="allChk"></td>
-                    <td>1</td>
-                    <td>2024-10-23</td>
-                    <td>한가인<button class="btn btn-icon btn-link-warning avtar-xs"><i class="ph-duotone ph-star"></i></button></td>
-                    <td>lorem</td>
-                    <td>일반회원</td>
-                    <td>20241024-00000001</td>
-                    <td>200,000,000</td>
-                    <td>50</td>
-                    <td>
-                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-envelope"></i></button>
-                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-messenger-logo"></i></button>
-                    	<button class="btn btn-icon btn-link-warning avtar-xs"><i class="ph-duotone ph-notepad"></i></button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-responsive">
+	              <table class="table  table-bordered align-middle ">
+	                <thead class="text-center">
+	                  <tr>
+	                    <th scope="col"><input type="checkbox" onclick="check_all('use_check[]', this);" class="allChk"></th>
+	                    <th scope="col">No</th>
+	                    <th scope="col">최근 주문일</th>
+	                    <th scope="col">이름</th>
+	                    <th scope="col">아이디</th>
+	                    <th scope="col">회원등급</th>
+	                    <th scope="col">최근 주문번호</th>
+	                    <th scope="col">총 주문 금액</th>
+	                    <th scope="col">총 주문 건수</th>
+	                    <th scope="col">메일/SMS/메모</th>
+	                  </tr>
+	                </thead>
+	                <tbody class="text-center ">
+	                  <tr>
+	                    <td><input type="checkbox" onclick="check_all('use_check[]', this);" class="allChk"></td>
+	                    <td>1</td>
+	                    <td>2024-10-23</td>
+	                    <td>한가인<button class="btn btn-icon btn-link-warning avtar-xs"><i class="ph-duotone ph-star"></i></button></td>
+	                    <td>lorem</td>
+	                    <td>일반회원</td>
+	                    <td>20241024-00000001</td>
+	                    <td>200,000,000</td>
+	                    <td>50</td>
+	                    <td>
+	                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-envelope"></i></button>
+	                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-messenger-logo"></i></button>
+	                    	<button class="btn btn-icon btn-link-warning avtar-xs"><i class="ph-duotone ph-notepad"></i></button>
+	                    </td>
+	                  </tr>
+	                </tbody>
+	              </table>
+              </div>
               <div class="no-result text-center mt-5 mb-5 visually-hidden">
                 검색된 주문 회원 내역이 없습니다.
               </div>

@@ -135,40 +135,42 @@
                 <button type="button" class="btn btn-outline-secondary btn-sm">불량회원 설정</button>
                 <button type="button" class="btn btn-outline-danger btn-sm">탈퇴 / 삭제</button>
               </div>
-              <table class="table  table-bordered align-middle table-responsive">
-                <thead class="text-center">
-                  <tr>
-                    <th scope="col"><input type="checkbox" onclick="check_all('use_check[]', this);" class="allChk"></th>
-                    <th scope="col">등록일</th>
-                    <th scope="col">이름</th>
-                    <th scope="col">아이디</th>
-                    <th scope="col">등급</th>
-                    <th scope="col">휴대전화</th>
-                    <th scope="col">메일/SMS/메모</th>
-                    <th scope="col">관련 내역 보기</th>
-                  </tr>
-                </thead>
-                <tbody class="text-center ">
-                  <tr>
-                    <td><input type="checkbox" onclick="check_all('use_check[]', this);" class="allChk"></td>
-                    <td>2024-10-15</td>
-                    <td>한가인</td>
-                    <td>lorem</td>
-                    <td>일반회원</td>
-                    <td>01012341234</td>
-                    <td>
-                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-envelope"></i></button>
-                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-messenger-logo"></i></button>
-                    	<button class="btn btn-icon btn-link-warning avtar-xs"><i class="ph-duotone ph-notepad"></i></button>
-                    </td>
-                    <td>
-	                    <button type="button" class="btn btn-outline-primary btn-sm">주문</button>
-	                    <!-- <button type="button" class="btn btn-outline-primary">적립금</button>
-	                    <button type="button" class="btn btn-outline-primary">쿠폰</button> -->
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-responsive">
+	              <table class="table  table-bordered align-middle">
+	                <thead class="text-center">
+	                  <tr>
+	                    <th scope="col"><input type="checkbox" onclick="check_all('use_check[]', this);" class="allChk"></th>
+	                    <th scope="col">등록일</th>
+	                    <th scope="col">이름</th>
+	                    <th scope="col">아이디</th>
+	                    <th scope="col">등급</th>
+	                    <th scope="col">휴대전화</th>
+	                    <th scope="col">메일/SMS/메모</th>
+	                    <th scope="col">관련 내역 보기</th>
+	                  </tr>
+	                </thead>
+	                <tbody class="text-center ">
+	                  <tr>
+	                    <td><input type="checkbox" onclick="check_all('use_check[]', this);" class="allChk"></td>
+	                    <td>2024-10-15</td>
+	                    <td>한가인</td>
+	                    <td>lorem</td>
+	                    <td>일반회원</td>
+	                    <td>01012341234</td>
+	                    <td>
+	                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-envelope"></i></button>
+	                    	<button class="btn btn-icon btn-link-success avtar-xs"><i class="ph-duotone ph-messenger-logo"></i></button>
+	                    	<button class="btn btn-icon btn-link-warning avtar-xs"><i class="ph-duotone ph-notepad"></i></button>
+	                    </td>
+	                    <td>
+		                    <button type="button" class="btn btn-outline-primary btn-sm">주문</button>
+		                    <!-- <button type="button" class="btn btn-outline-primary">적립금</button>
+		                    <button type="button" class="btn btn-outline-primary">쿠폰</button> -->
+	                    </td>
+	                  </tr>
+	                </tbody>
+	              </table>
+              </div>
               <div class="no-result text-center mt-5 mb-5 visually-hidden">
                 검색된 회원 내역이 없습니다.
               </div>

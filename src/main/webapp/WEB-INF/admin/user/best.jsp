@@ -84,28 +84,31 @@
                   <option>1000개씩 보기</option>
                 </select>
               </div>
-              <table class="table  table-bordered align-middle table-responsive">
-                <thead class="text-center">
-                  <tr>
-                    <th scope="col">순위</th>
-                    <th scope="col">아이디</th>
-                    <th scope="col">이름</th>
-                    <th scope="col">휴대폰번호</th>
-                    <th scope="col">주소</th>
-                    <th scope="col">기간내 총 주문금액</th>
-                  </tr>
-                </thead>
-                <tbody class="text-center ">
-                  <tr>
-                    <td>1</td>
-                    <td>lorem</td>
-                    <td>한가인</td>
-                    <td>010-2831-8705</td>
-                    <td>경기 하남시 미사강변동로 85 힐스테이트에코미사 305, 6, 7 ,8호</td>
-                    <td>200,000,000</td>
-                  </tr>
-                </tbody>
-              </table>
+              
+              <div class="table-responsive">
+	              <table class="table  table-bordered align-middle table-responsive">
+	                <thead class="text-center">
+	                  <tr>
+	                    <th scope="col">순위</th>
+	                    <th scope="col">아이디</th>
+	                    <th scope="col">이름</th>
+	                    <th scope="col">휴대폰번호</th>
+	                    <th scope="col">주소</th>
+	                    <th scope="col">기간내 총 주문금액</th>
+	                  </tr>
+	                </thead>
+	                <tbody class="text-center ">
+	                  <tr>
+	                    <td>1</td>
+	                    <td>lorem</td>
+	                    <td>한가인</td>
+	                    <td>010-2831-8705</td>
+	                    <td>경기 하남시 미사강변동로 85 힐스테이트에코미사 305, 6, 7 ,8호</td>
+	                    <td>200,000,000</td>
+	                  </tr>
+	                </tbody>
+	              </table>
+              </div>
               <div class="no-result text-center mt-5 mb-5 visually-hidden">
                 검색된 회원 내역이 없습니다.
               </div>

@@ -90,28 +90,30 @@
                   <option>200개씩 보기</option>
                 </select>
               </div>
-              <table class="table  table-bordered align-middle table-responsive">
-                <thead class="text-center">
-                  <tr>
-                    <th scope="col">휴면 처리일</th>
-                    <th scope="col">아이디</th>
-                    <th scope="col">이름</th>
-                    <th scope="col">이메일</th>
-                    <th scope="col">휴대폰 번호</th>
-                    <th scope="col">성별</th>
-                  </tr>
-                </thead>
-                <tbody class="text-center ">
-                  <tr>
-                    <td>2024-10-23</td>
-                    <td>lorem</td>
-                    <td>한가인</td>
-                    <td>lorem@ipsum.com</td>
-                    <td>010-1234-1234</td>
-                    <td>여자</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table-responsive">
+                <table class="table  table-bordered align-middle">
+	                <thead class="text-center">
+	                  <tr>
+	                    <th scope="col">휴면 처리일</th>
+	                    <th scope="col">아이디</th>
+	                    <th scope="col">이름</th>
+	                    <th scope="col">이메일</th>
+	                    <th scope="col">휴대폰 번호</th>
+	                    <th scope="col">성별</th>
+	                  </tr>
+	                </thead>
+	                <tbody class="text-center ">
+	                  <tr>
+	                    <td>2024-10-23</td>
+	                    <td>lorem</td>
+	                    <td>한가인</td>
+	                    <td>lorem@ipsum.com</td>
+	                    <td>010-1234-1234</td>
+	                    <td>여자</td>
+	                  </tr>
+	                </tbody>
+	              </table>
+              </div>
               <div class="no-result text-center mt-5 mb-5 visually-hidden">
                 검색된 회원 내역이 없습니다.
               </div>
