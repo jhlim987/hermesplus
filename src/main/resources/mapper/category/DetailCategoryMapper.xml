@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.shop.hermesPlus.category.mapper.DetailCategoryMapper">
+
+	<select id="selectAllDetailCategories"
+		resultType="com.shop.hermesPlus.category.vo.CategoryVO">
+		SELECT DETAIL_CATEGORY_ID, SUB_CATEGORY_ID, DETAIL_CATEGORY_NAME FROM
+		DetailCategory
+	</select>
+
+	<select id="selectDetailCategory"
+		resultType="com.shop.hermesPlus.category.vo.CategoryVO">
+		SELECT DETAIL_CATEGORY_ID, SUB_CATEGORY_ID, DETAIL_CATEGORY_NAME FROM
+		DetailCategory WHERE DETAIL_CATEGORY_ID = #{detailCategoryId}
+	</select>
+
+	<select id="findBySubCategoryId" parameterType="int"
+		resultType="com.shop.hermesPlus.category.vo.CategoryVO">
+		SELECT DETAIL_CATEGORY_ID AS detailCategoryId,
+		FOREIGN_SUB_CATEGORY_ID AS foreignSubCategoryId,
+		DETAIL_CATEGORY_NAME
+		AS detailCategoryName
+		FROM DetailCategory
+		WHERE FOREIGN_SUB_CATEGORY_ID
+		=
+		#{subCategoryId}
+	</select>
+
+	<insert id="insertDetailCategory">
+		INSERT INTO DetailCategory (FOREIGN_MAIN_CATEGORY_ID, FOREIGN_SUB_CATEGORY_ID, DETAIL_CATEGORY_NAME)
+		VALUES (#{foreignMainCategoryId}, #{foreignSubCategoryId}, #{detailCategoryName})
+	</insert>
+
+	<update id="updateDetailCategory">
+		UPDATE DetailCategory
+		SET DETAIL_CATEGORY_NAME = #{detailCategoryName}
+		WHERE DETAIL_CATEGORY_ID = #{detailCategoryId}
+	</update>
+
+	<delete id="deleteDetailCategory">
+		DELETE FROM DetailCategory WHERE DETAIL_CATEGORY_ID = #{detailCategoryId}
+	</delete>
+
+</mapper>
