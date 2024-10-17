@@ -10,7 +10,7 @@
             <div class="row align-items-center">
               <div class="col-md-12">
                 <div class="page-header-title">
-                  <h2 class="mb-0">주문 대쉬보드</h2>
+                  <h2 class="mb-0">상품 대쉬보드</h2>
                 </div>
               </div>
             </div>

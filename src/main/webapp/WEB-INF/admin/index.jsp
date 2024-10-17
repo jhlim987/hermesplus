@@ -28,7 +28,7 @@
           <div class="col-md-4 col-sm-12">
             <div class="card statistics-card-1 overflow-hidden  bg-brand-color-3">
               <div class="card-body">
-                <img src="/assets/images/widget/img-status-6.svg" alt="img" class="img-fluid img-bg" >
+                <img src="/static/assets/images/widget/img-status-6.svg" alt="img" class="img-fluid img-bg" >
                 <h5 class="mb-4 text-white">일별 매출 현황</h5>
                 <div class="d-flex align-items-center mt-3">
                   <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">&#8361;10,000,000</h3>
@@ -47,7 +47,7 @@
           <div class="col-md-4 col-sm-6">
             <div class="card statistics-card-1 overflow-hidden">
               <div class="card-body">
-                <img src="/assets/images/widget/img-status-4.svg" alt="img" class="img-fluid img-bg" >
+                <img src="/static/assets/images/widget/img-status-4.svg" alt="img" class="img-fluid img-bg" >
                 <h5 class="mb-4">월별 매출 현황</h5>
                 <div class="d-flex align-items-center mt-3">
                   <h3 class="f-w-300 d-flex align-items-center m-b-0">&#8361;20,000,000</h3>
@@ -62,7 +62,7 @@
           <div class="col-md-4 col-sm-6">
             <div class="card statistics-card-1 overflow-hidden ">
               <div class="card-body">
-                <img src="/assets/images/widget/img-status-5.svg" alt="img" class="img-fluid img-bg" >
+                <img src="/static/assets/images/widget/img-status-5.svg" alt="img" class="img-fluid img-bg" >
                 <h5 class="mb-4">오늘 신규 회원</h5>
                 <div class="d-flex align-items-center mt-3">
                   <h3 class="f-w-300 d-flex align-items-center m-b-0">100명</h3>

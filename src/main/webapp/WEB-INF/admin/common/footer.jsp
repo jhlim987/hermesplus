@@ -13,7 +13,8 @@
               <li class="list-inline-item"><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a></li>
               <li class="list-inline-item"><a target="_blank" href="https://light-able-react-light.vercel.app/">Light Able Demo</a></li>
               <li class="list-inline-item"><a target="_blank" href="https://www.iconfinder.com/search/icons?family=phosphor-duotone" target="_blank">Icons</a></li>
-              <li class="list-inline-item"><a target="_blank" href="http://localhost/admin-pages/elements/bc_alert.html" target="_blank">Components</a></li>
+              <li class="list-inline-item"><a target="_blank" href="/static/assets/fonts/phosphor/duotone/style.css" target="_blank">Icons CSS</a></li>
+              <li class="list-inline-item"><a target="_blank" href="https://light-able-react-components.vercel.app/elements/bc_alert" target="_blank">Components</a></li>
               <li class="list-inline-item"><a target="_blank" href="https://pcoded.gitbook.io/light-able/" target="_blank">Documentation</a></li>
             </ul>
           </div>
@@ -21,12 +22,12 @@
       </div>
     </footer>
  <!-- Required Js -->
-<script src="/assets/js/plugins/popper.min.js"></script>
-<script src="/assets/js/plugins/simplebar.min.js"></script>
-<script src="/assets/js/plugins/bootstrap.min.js"></script>
-<script src="/assets/js/fonts/custom-font.js"></script>
-<script src="/assets/js/pcoded.js"></script>
-<script src="/assets/js/plugins/feather.min.js"></script>
+<script src="/static/assets/js/plugins/popper.min.js"></script>
+<script src="/static/assets/js/plugins/simplebar.min.js"></script>
+<script src="/static/assets/js/plugins/bootstrap.min.js"></script>
+<script src="/static/assets/js/fonts/custom-font.js"></script>
+<script src="/static/assets/js/pcoded.js"></script>
+<script src="/static/assets/js/plugins/feather.min.js"></script>
 
 <script>layout_change('light');</script>
 
