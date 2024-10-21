@@ -6,8 +6,8 @@
 
     <!-- 로컬 js -->
     <script src='/static/js/script.js' defer></script>
-    <script src='/static/js/terms.js' defer></script
-    <!-- 헤더 끝 기분좋아서 주석 쿠헤헤 -->
+    <script src='/static/js/terms.js' defer></script>
+<!-- 헤더 끝 기분좋아서 주석 쿠헤헤 -->
     <main id="main" class="margin-bottom-60 mobile-margin-rl-15 contact">
         <div class="main-container">
             <div class="back-button-area">
