@@ -75,13 +75,18 @@
           </a>
           <ul class="pc-submenu">
             <li class="pc-item"><a class="pc-link" href="/admin/order/order-dashboard">주문 대시보드</a></li>
-            <li class="pc-item"><a class="pc-link" href="">전체 주문 조회</a></li>
-            <li class="pc-item"><a class="pc-link" href="">입금전 관리</a></li>
-            <li class="pc-item"><a class="pc-link" href="">배송 준비중 관리</a></li>
-            <li class="pc-item"><a class="pc-link" href="">배송 대기 관리</a></li>
-            <li class="pc-item"><a class="pc-link" href="">배송 중 관리</a></li>
-            <li class="pc-item"><a class="pc-link" href="">배송 완료 조회</a></li>
-            <li class="pc-item"><a class="pc-link" href="">취소/교환/반품/환불</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/order/order-inquiry">전체 주문 조회</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/order/order-unpaid">입금전 관리</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/order/order-delivery">배송 관리</a></li>
+            <li class="pc-item pc-hasmenu">
+              <a class="pc-link" href="#!">CS 관리<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" href="/admin/order/order-cancle">취소 관리</a></li>
+                <li class="pc-item"><a class="pc-link" href="/admin/order/order-exchange" >교환 관리</a></li>
+                <li class="pc-item"><a class="pc-link" href="/admin/order/order-return"  >반품 관리</a></li>
+                <li class="pc-item"><a class="pc-link" href="/admin/order/order-refund"  >환불 관리</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
