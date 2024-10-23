@@ -10,7 +10,7 @@
 
 <!-- 로컬 js -->
 <script src='/static/js/script.js' defer></script>
-<script src='/static/js/login.js' defer></script>
+<script src='/static/js/user/login.js' defer></script>
 
 <main id="main">
   <button onclick="toggleEmailPwd()" type="button" class="btn btn-primary">바꿔봐</button>
@@ -43,89 +43,6 @@
   </div>
 </main>
 <script>
-const infoText1   = document.getElementById('infoText1');
-const infoRequired1   = document.getElementById('infoRequired1');
-const checkEmailBtn   = document.getElementById('checkEmail');
-const uiEmail   = document.getElementById('uiEmail');
-const pwdArea   = document.getElementById('pwdArea');
-const userEmailLabel   = document.getElementById('userEmailLabel');
-const uiPwd   = document.getElementById('uiPwd');
-let pwdFlag = false;
-function showPwd(){
-  if(pwdFlag){
-	  uiPwd.type = 'password';
-    pwdFlag = false;
-  }else{
-	  uiPwd.type = 'text';
-    pwdFlag = true;
-  }
-}//비밀번호 보기에 관한 
 
-function checkEmail(){
-  let param = {
-		  uiEmail : uiEmail.value
-  }
-  param = JSON.stringify(param);
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST','/user/checkEmail');
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState === xhr.DONE){
-      if(xhr.status === 200){
-        if(xhr.responseText>0){
-        	toggleEmailPwd();
-        }else{
-        	//no account then create account
-        	//location.href="/views/user/create-account"
-        }
-      }
-    }
-  }
-  xhr.send(param);
-}
-
-function login(){
-	let param = {
-      uiEmail : uiEmail.value,
-      uiPwd : uiPwd.value
-  }
-  param = JSON.stringify(param);
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST','/user');
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState === xhr.DONE){
-      if(xhr.status === 200){
-        const user = JSON.parse(xhr.responseText);
-        if(user!=null){
-        	alert('로긴성공');
-        }else{
-        	alert('로긴실패');
-        }
-      }
-    }
-  }
-  xhr.send(param);
-}
-function toggleEmailPwd(flag){
-	if(flag!=null){
-		uiEmail.value = '';
-	}//펑션의 인자값이 있으면 밸류 지워버림. 
-	toggleDisabled(uiEmail);
-	uiEmail.classList.toggle("shorten-margin");
-	uiEmail.classList.toggle("disabled");
-	userEmailLabel.classList.toggle("selected");
-	infoText1.classList.toggle("d-none");
-	checkEmailBtn.classList.toggle("d-none");
-	infoRequired1.classList.toggle("d-none");
-	pwdArea.classList.toggle("d-none");
-}
-function toggleDisabled(Obj){
-	if(Obj.disabled){
-		Obj.disabled = false;
-	}else{
-		Obj.disabled = true;
-	}
-}
 </script>
 <%@ include file="/WEB-INF/views/common/footer.jsp" %>

@@ -49,6 +49,7 @@
    <link rel='stylesheet' href='/static/css/style.css' />
 
    <!-- 로컬 js -->
+   <script src='/static/js/common.js' defer></script>
    <script src='/static/js/script.js' defer></script>
    <script src='/static/js/main.js' defer></script>
 
