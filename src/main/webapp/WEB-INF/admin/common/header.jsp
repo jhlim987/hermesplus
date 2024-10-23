@@ -98,9 +98,9 @@
             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
           </a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="/admin/product/product-dashboard">상품 대시보드</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/product/product-dashboard1">상품 대시보드</a></li>
             <li class="pc-item"><a class="pc-link" href="">상품 목록</a></li>
-            <li class="pc-item"><a class="pc-link" href="">상품 등록</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/product/product-insert">상품 등록</a></li>
             <li class="pc-item"><a class="pc-link" href="">상품 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">분류 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">상품 진열</a></li>
@@ -167,7 +167,7 @@
             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
           </a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="">카테고리 만들기</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/category/category-dashboard">카테고리 만들기</a></li>
             <li class="pc-item"><a class="pc-link" href="">메인 카테고리 설정</a></li>
             <li class="pc-item"><a class="pc-link" href="">푸터 카테고리 설정</a></li>
             <li class="pc-item"><a class="pc-link" href="">상점 관리</a></li>
