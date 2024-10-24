@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.hermesPlus.order.mapper.CardComInfoMapper">
+
+	<select id="selectCardcoms" resultType="com.shop.hermesPlus.order.vo.CardcomInfoVO">
+		SELECT * FROM CARD_COM_INFO
+	</select>
+
+	<select id="selectCardcom" resultType="com.shop.hermesPlus.order.vo.CardcomInfoVO">
+		SELECT * FROM CARD_COM_INFO WHERE CCI_NUM = #{cciNum}
+	</select>
+	
+	<insert id="insertCardcom">
+		INSERT INTO CARD_COM_INFO (CCI_NAME, CCI_ID)
+		VALUES (#{cciName},#{cciId})
+	</insert>
+	
+	<update id="updateCardcom">
+		UPDATE CARD_COM_INFO
+		SET CCI_NAME = #{cciName},
+			CCI_ID = #{cciId}
+		WHERE CCI_NUM = #{cciNum}
+	</update>
+	
+	<delete id="deleteCardcom">
+		DELETE FROM CARD_COM_INFO WHERE CCI_NUM = #{cciNum}
+	</delete>
+</mapper>

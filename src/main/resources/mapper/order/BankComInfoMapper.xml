@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.hermesPlus.order.mapper.BankComInfoMapper">
+
+	<select id="selectBankcoms" resultType="com.shop.hermesPlus.order.vo.BankcomInfoVO">
+		SELECT * FROM BANK_COM_INFO
+	</select>
+
+	<select id="selectBankcom" resultType="com.shop.hermesPlus.order.vo.BankcomInfoVO">
+		SELECT * FROM BANK_COM_INFO WHERE BCI_NUM = #{bciNum}
+	</select>
+	
+	<insert id="insertBankcom">
+		INSERT INTO BANK_COM_INFO (BCI_NAME, BCI_ID)
+		VALUES (#{bciName},#{bciId})
+	</insert>
+	
+	<update id="updateBankcom">
+		UPDATE BANK_COM_INFO
+		SET BCI_NAME = #{bciName},
+			BCI_ID = #{bciId}
+		WHERE BCI_NUM = #{bciNum}
+	</update>
+	
+	<delete id="deleteBankcom">
+		DELETE FROM BANK_COM_INFO WHERE BCI_NUM = #{bciNum}
+	</delete>
+</mapper>
