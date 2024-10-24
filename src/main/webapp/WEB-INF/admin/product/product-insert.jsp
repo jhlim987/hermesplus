@@ -81,15 +81,15 @@
 							<tr>
 								<th class="text-center col-sm-2 ms-2"
 									style="border-right: 1px solid #ccc;">상품코드</th>
-								<td><input type="text" class="form-control"></td>
+								<td><input type="text" class="form-control" id="piCode"></td>
 							</tr>
 							<tr>
 								<th class="text-center" style="border-right: 1px solid #ccc;">상품명</th>
-								<td><input type="text" class="form-control"></td>
+								<td><input type="text" class="form-control" id="piName"></td>
 							</tr>
 							<tr>
 								<th class="text-center" style="border-right: 1px solid #ccc;">가격</th>
-								<td><input type="number" min="0" class="form-control"></td>
+								<td><input type="number" min="0" class="form-control" id="piPrice"></td>
 							</tr>
 							<tr>
 								<th class="text-center" style="border-right: 1px solid #ccc;">색상</th>
@@ -130,9 +130,9 @@
 								<td>
 									<div class="d-flex align-items-center">
 										<input type="number" min="0" class="form-control me-2"
-											placeholder="제품 착용 모델의 키를 입력하세요."> <input
+											placeholder="제품 착용 모델의 키를 입력하세요." id="pdiHeight"> <input
 											type="number" min="0" class="form-control me-2"
-											placeholder="제품 착용 모델의 사이즈를 입력하세요.">
+											placeholder="제품 착용 모델의 사이즈를 입력하세요." id="pdiSize">
 									</div>
 								</td>
 							</tr>
@@ -142,7 +142,7 @@
 									<div class="d-flex align-items-center">
 										<input type="text" id="selectedMaterial" data-material-id=""
 											class="form-control me-2" readonly
-											placeholder="선택버튼을 클릭하여 소재를 선택해주세요">
+											placeholder="선택버튼을 클릭하여 소재를 선택해주세요" id="pmName">
 										<button type="button" class="btn btn-dark"
 											onclick="openMaterialSelection()">선택</button>
 									</div>
@@ -160,16 +160,31 @@
 							</tr>
 							<tr>
 								<th class="text-center" style="border-right: 1px solid #ccc;">제조국</th>
-								<td><input type="text" class="form-control"></td>
+								<td><input type="text" class="form-control" id="piCountryOfOrigin"></td>
 							</tr>
 							<tr>
-								<th class="text-center" style="border-right: 1px solid #ccc;">스토리 비하인드</th>
+								<th class="text-center" style="border-right: 1px solid #ccc;">스토리
+									비하인드</th>
 								<td>
 									<div class="d-flex align-items-center">
-										<textarea class="form-control me-2"
-											rows="3"></textarea>
+										<textarea class="form-control me-2" rows="3" id="piStory"></textarea>
 									</div>
 								</td>
+							</tr>
+							<tr>
+								<th class="text-center col-sm-2"
+									style="border-right: 1px solid #ccc;">이미지 등록</th>
+								<td>
+									<div id="imagePreviewContainer" class="mt-3"></div> <input
+									type="file" id="imageUpload" multiple accept="image/*"
+									onchange="previewImages()">
+								</td>
+							</tr>
+							<tr>
+								<th colspan="2" class="text-center"
+									style="border-right: 1px solid #ccc;">
+									<button type="button" class="btn btn-primary me-2" onclick="addProduct()">제품등록</button>
+								</th>
 							</tr>
 						</table>
 					</div>
@@ -182,6 +197,34 @@
 </div>
 <!-- [ Main Content ] end -->
 <script>
+//상품 DB에 등록
+function addProduct(){
+	
+}
+
+//이미지 미리보기
+function previewImages() {
+    const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+    const files = document.getElementById('imageUpload').files;
+
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+
+        if (!file.type.startsWith('image/')) { continue; }
+
+        const img = document.createElement("img");
+        img.classList.add("img-thumbnail", "me-2", "mb-2");
+        img.style.width = "100px";
+        img.style.height = "100px";
+        img.file = file;
+        imagePreviewContainer.appendChild(img);
+
+        const reader = new FileReader();
+        reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+        reader.readAsDataURL(file);
+    }
+}
+
 //"선택" 버튼을 클릭하면 새 창을 엽니다.(소재)
   function openMaterialSelection() {
         const width = 600; // 새 창의 너비

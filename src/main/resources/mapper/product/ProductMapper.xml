@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.hermesplus.product.mapper.ProductMapper">
+	<select id="selectProducts"
+		resultType="com.shop.hermesplus.product.vo.ProductVO">
+		SELECT *
+		FROM product
+		WHERE PI_ID = #{piId}
+	</select>
+
+	<!-- Select Product by ID -->
+	<select id="selectProduct"
+		resultType="com.shop.hermesplus.product.vo.ProductVO">
+		SELECT *
+		FROM product
+		WHERE PI_ID = #{piId}
+	</select>
+
+	<!-- Insert Product -->
+	<insert id="insertProduct">
+		INSERT INTO product (
+		PI_CODE,
+		PI_NAME,
+		PI_PRICE,
+		PI_COUNTRY_OF_ORIGIN,
+		PI_STORY
+		PI_MAIN_CATEGORY_ID,
+		PI_SUB_CATEGORY_ID,
+		PI_DETAIL_CATEGORY_ID
+		) VALUES (
+		#{piCode},
+		#{piName},
+		#{piPrice},
+		#{piCountryOfOrigin},
+		#{piStory},
+		#{piMainCategoryId},
+		#{piSubCategoryId},
+		#{piDetailCategoryId}
+		)
+	</insert>
+	
+	 <!-- Update Product -->
+    <update id="updateProduct">
+        UPDATE product
+        SET
+            PI_CODE = #{piCode},
+            PI_NAME = #{piName},
+            PI_PRICE = #{piPrice},
+            PI_COUNTRY_OF_ORIGIN = #{piCountryOfOrigin},
+            PI_STORY = #{piStory},
+            PI_MAIN_CATEGORY_ID = #{piMainCategoryId},
+            PI_SUB_CATEGORY_ID = #{piSubCategoryId},
+            PI_DETAIL_CATEGORY_ID = #{piDetailCategoryId}
+        WHERE PI_ID = #{piId}
+    </update>
+
+    <!-- Delete Product by ID -->
+    <delete id="deleteProduct">
+        DELETE FROM product
+        WHERE PI_ID = #{piId}
+    </delete>
+
+
+</mapper>

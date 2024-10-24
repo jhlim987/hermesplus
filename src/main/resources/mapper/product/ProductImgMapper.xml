@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.hermesplus.product.mapper.ProductImgMapper">
+
+	<select id="selectProductImgs"
+		resultType="com.shop.hermesplus.product.vo.ProductImgVO">
+		SELECT * FROM product_img;
+	</select>
+
+	<select id="selectProductImg"
+		resultType="com.shop.hermesplus.product.vo.ProductImgVO">
+		SELECT * FROM product_img WHERE PI_ID = #{piId};
+	</select>
+
+	<insert id="insertProductImg">
+		INSERT INTO product_img (PI_ID, PIMG_NAME, PIMG_PATH)
+		VALUES (#{piId}, #{pimgName}, #{pimgPath});
+	</insert>
+
+	<update id="updateProductImg">
+		UPDATE product_img
+		SET
+		PIMG_NAME = #{pimgName},
+		PIMG_PATH = #{pimgPath}
+		WHERE
+		PIMG_ID = #{pimgId}
+	</update>
+
+	<delete id="deleteProductImg">
+		DELETE FROM product_img WHERE PI_ID = #{piId};
+	</delete>
+
+</mapper>
