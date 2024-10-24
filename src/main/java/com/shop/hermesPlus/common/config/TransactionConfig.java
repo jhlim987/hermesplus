@@ -40,7 +40,7 @@ public class TransactionConfig {
 	@Bean
 	Advisor advisor() {
 		AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
-		pointcut.setExpression("execution(* com.rest.test..*Service.*(..))");
+		pointcut.setExpression("execution(* com.com.shop.hermesPlus..*Service.*(..))");
 		DefaultPointcutAdvisor advisor = new DefaultPointcutAdvisor(pointcut, txAdvice());
 		return advisor;
 	}
