@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.product.mapper.ProductColorMapper">
+<mapper namespace="com.shop.hermesplus.product.mapper.ProductColorMapper">
 
-    <select id="selectProductColors" resultType="com.shop.hermesPlus.product.vo.ProductColorVO">
+    <select id="selectProductColors" resultType="com.shop.hermesplus.product.vo.ProductColorVO">
         SELECT * FROM product_color
     </select>
     
-    <select id="selectProductColor" parameterType="int" resultType="com.shop.hermesPlus.product.vo.ProductColorVO">
+    <select id="selectProductColor" parameterType="int" resultType="com.shop.hermesplus.product.vo.ProductColorVO">
         SELECT * FROM product_color WHERE PC_ID = #{pcId}
     </select>
 
-    <insert id="insertProductColor" parameterType="com.shop.hermesPlus.product.vo.ProductColorVO">
+    <insert id="insertProductColor" parameterType="com.shop.hermesplus.product.vo.ProductColorVO">
         INSERT INTO product_color (PC_NAME) VALUES (#{pcName})
     </insert>
 
-    <update id="updateProductColor" parameterType="com.shop.hermesPlus.product.vo.ProductColorVO">
+    <update id="updateProductColor" parameterType="com.shop.hermesplus.product.vo.ProductColorVO">
         UPDATE product_color 
         SET PC_NAME = #{pcName} 
         WHERE PC_ID = #{pcId}

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.product.mapper.ProductRefundMapper">
+<mapper namespace="com.shop.hermesplus.product.mapper.ProductRefundMapper">
 
-    <select id="selectProductRefunds" resultType="com.shop.hermesPlus.product.vo.ProductRefundVO">
+    <select id="selectProductRefunds" resultType="com.shop.hermesplus.product.vo.ProductRefundVO">
         SELECT * FROM product_refund
     </select>
     
-    <select id="selectProductRefund" parameterType="int" resultType="com.shop.hermesPlus.product.vo.ProductRefundVO">
+    <select id="selectProductRefund" parameterType="int" resultType="com.shop.hermesplus.product.vo.ProductRefundVO">
         SELECT * FROM product_refund WHERE PR_ID = #{prId}
     </select>
 
-    <insert id="insertProductRefund" parameterType="com.shop.hermesPlus.product.vo.ProductRefundVO">
+    <insert id="insertProductRefund" parameterType="com.shop.hermesplus.product.vo.ProductRefundVO">
         INSERT INTO product_refund (PR_DESC) VALUES (#{prDesc})
     </insert>
 
-    <update id="updateProductRefund" parameterType="com.shop.hermesPlus.product.vo.ProductRefundVO">
+    <update id="updateProductRefund" parameterType="com.shop.hermesplus.product.vo.ProductRefundVO">
         UPDATE product_refund 
         SET PR_DESC = #{prDesc}
         WHERE PR_ID = #{prId}

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.product.mapper.ProductAddInfoMapper">
+<mapper namespace="com.shop.hermesplus.product.mapper.ProductAddInfoMapper">
 
-    <select id="selectProductAddInfos" resultType="com.shop.hermesPlus.product.vo.ProductAddInfoVO">
+    <select id="selectProductAddInfos" resultType="com.shop.hermesplus.product.vo.ProductAddInfoVO">
         SELECT * FROM product_add_info
     </select>
     
-    <select id="selectProductAddInfo" resultType="com.shop.hermesPlus.product.vo.ProductAddInfoVO">
-        SELECT * FROM product_add_info WHERE PAI_ID = #{paiId}
+    <select id="selectProductAddInfo" resultType="com.shop.hermesplus.product.vo.ProductAddInfoVO">
+        SELECT * FROM product_add_info WHERE PAI_ID = #{paiId} 
     </select>
 
     <insert id="insertProductAddInfo">

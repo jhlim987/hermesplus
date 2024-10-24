@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.order.mapper.RefundOrderMapper">
+<mapper namespace="com.shop.hermesplus.order.mapper.RefundOrderMapper">
 
-	<select id="selectRefundOrders" resultType="com.shop.hermesPlus.order.vo.RefundOrderVO">
+	<select id="selectRefundOrders" resultType="com.shop.hermesplus.order.vo.RefundOrderVO">
 		SELECT * FROM REFUND_ORDER
 	</select>
 
-	<select id="selectRefundOrder" resultType="com.shop.hermesPlus.order.vo.RefundOrderVO">
+	<select id="selectRefundOrder" resultType="com.shop.hermesplus.order.vo.RefundOrderVO">
 		SELECT * FROM REFUND_ORDER WHERE RFO_NUM = #{rfoNum}
 	</select>
 	

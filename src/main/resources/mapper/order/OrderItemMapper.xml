@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.order.mapper.OrderItemMapper">
-	<select id="selectOrderItems" resultType="com.shop.hermesPlus.order.vo.OrderItemVO">
+<mapper namespace="com.shop.hermesplus.order.mapper.OrderItemMapper">
+	<select id="selectOrderItems" resultType="com.shop.hermesplus.order.vo.OrderItemVO">
 		SELECT * FROM ORDER_ITEM
 	</select>
 	
-	<select id="selectOrderItem" resultType="com.shop.hermesPlus.order.vo.OrderItemVO">
+	<select id="selectOrderItem" resultType="com.shop.hermesplus.order.vo.OrderItemVO">
 		SELECT * FROM ORDER_ITEM WHERE OI_NUM=#{oiNum}
 	</select>
 	

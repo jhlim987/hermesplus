@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.order.mapper.CardComInfoMapper">
+<mapper namespace="com.shop.hermesplus.order.mapper.CardComInfoMapper">
 
-	<select id="selectCardcoms" resultType="com.shop.hermesPlus.order.vo.CardcomInfoVO">
+	<select id="selectCardcoms" resultType="com.shop.hermesplus.order.vo.CardcomInfoVO">
 		SELECT * FROM CARD_COM_INFO
 	</select>
 
-	<select id="selectCardcom" resultType="com.shop.hermesPlus.order.vo.CardcomInfoVO">
+	<select id="selectCardcom" resultType="com.shop.hermesplus.order.vo.CardcomInfoVO">
 		SELECT * FROM CARD_COM_INFO WHERE CCI_NUM = #{cciNum}
 	</select>
 	

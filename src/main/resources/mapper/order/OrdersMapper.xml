@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.order.mapper.OrdersMapper">
+<mapper namespace="com.shop.hermesplus.order.mapper.OrdersMapper">
 
-	<select id="selectOrderAll" resultType="com.shop.hermesPlus.order.vo.OrdersVO">
+	<select id="selectOrderAll" resultType="com.shop.hermesplus.order.vo.OrdersVO">
 		SELECT * FROM ORDERS
 	</select>
 	
-	<select id="selectOrder" resultType="com.shop.hermesPlus.order.vo.OrdersVO">
+	<select id="selectOrder" resultType="com.shop.hermesplus.order.vo.OrdersVO">
 		SELECT * FROM ORDERS WHERE OR_NUM = #{orNum}
 	</select>
 	

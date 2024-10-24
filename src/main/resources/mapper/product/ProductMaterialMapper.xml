@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.product.mapper.ProductMaterialMapper">
+<mapper namespace="com.shop.hermesplus.product.mapper.ProductMaterialMapper">
 
-    <select id="selectProductMaterials" resultType="com.shop.hermesPlus.product.vo.ProductMaterialVO">
+    <select id="selectProductMaterials" resultType="com.shop.hermesplus.product.vo.ProductMaterialVO">
         SELECT * FROM product_material
     </select>
     
-    <select id="selectProductMaterial" parameterType="int" resultType="com.shop.hermesPlus.product.vo.ProductMaterialVO">
+    <select id="selectProductMaterial" parameterType="int" resultType="com.shop.hermesplus.product.vo.ProductMaterialVO">
         SELECT * FROM product_material WHERE PM_ID = #{pmId}
     </select>
 
-    <insert id="insertProductMaterial" parameterType="com.shop.hermesPlus.product.vo.ProductMaterialVO">
+    <insert id="insertProductMaterial" parameterType="com.shop.hermesplus.product.vo.ProductMaterialVO">
         INSERT INTO product_material (PM_NAME) VALUES (#{pmName})
     </insert>
 
-    <update id="updateProductMaterial" parameterType="com.shop.hermesPlus.product.vo.ProductMaterialVO">
+    <update id="updateProductMaterial" parameterType="com.shop.hermesplus.product.vo.ProductMaterialVO">
         UPDATE product_material 
         SET PM_NAME = #{pmName} 
         WHERE PM_ID = #{pmId}

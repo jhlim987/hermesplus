@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.order.mapper.PaymentInfoMapper">
-	<select id="selectPayinfos" resultType="com.shop.hermesPlus.order.vo.PaymentInfoVO">
+<mapper namespace="com.shop.hermesplus.order.mapper.PaymentInfoMapper">
+	<select id="selectPayinfos" resultType="com.shop.hermesplus.order.vo.PaymentInfoVO">
 		SELECT * FROM PAYMENT_INFO
 	</select>
 	
-	<select id="selectPayinfo" resultType="com.shop.hermesPlus.order.vo.PaymentInfoVO">
+	<select id="selectPayinfo" resultType="com.shop.hermesplus.order.vo.PaymentInfoVO">
 		SELECT * FROM PAYMENT_INFO WHERE PAI_NUM = #{paiNum}
 	</select>
 	

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.hermesPlus.order.mapper.DeliveryComInfoMapper">
+<mapper namespace="com.shop.hermesplus.order.mapper.DeliveryComInfoMapper">
 
-	<select id="selectDeliveryComs" resultType="com.shop.hermesPlus.order.vo.DeliverycomInfoVO">
+	<select id="selectDeliveryComs" resultType="com.shop.hermesplus.order.vo.DeliverycomInfoVO">
 		SELECT * FROM DELIVERY_COM_INFO
 	</select>
 	
-	<select id="selectDeliveryCom" resultType="com.shop.hermesPlus.order.vo.DeliverycomInfoVO">
+	<select id="selectDeliveryCom" resultType="com.shop.hermesplus.order.vo.DeliverycomInfoVO">
 		SELECT * FROM DELIVERY_COM_INFO WHERE DCI_NUM = #{dciNum}
 	</select>
 	

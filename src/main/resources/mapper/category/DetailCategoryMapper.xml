@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper
-	namespace="com.shop.hermesPlus.category.mapper.DetailCategoryMapper">
+	namespace="com.shop.hermesplus.category.mapper.DetailCategoryMapper">
 
 	<select id="selectAllDetailCategories"
-		resultType="com.shop.hermesPlus.category.vo.CategoryVO">
+		resultType="com.shop.hermesplus.category.vo.CategoryVO">
 		SELECT DETAIL_CATEGORY_ID, SUB_CATEGORY_ID,
 		DETAIL_CATEGORY_NAME FROM
 		DetailCategory
 	</select>
 
 	<select id="selectDetailCategory"
-		resultType="com.shop.hermesPlus.category.vo.CategoryVO">
+		resultType="com.shop.hermesplus.category.vo.CategoryVO">
 		SELECT DETAIL_CATEGORY_ID, SUB_CATEGORY_ID,
 		DETAIL_CATEGORY_NAME FROM
 		DetailCategory WHERE DETAIL_CATEGORY_ID =
@@ -19,7 +19,7 @@
 	</select>
 
 	<select id="findBySubCategoryId" parameterType="int"
-		resultType="com.shop.hermesPlus.category.vo.CategoryVO">
+		resultType="com.shop.hermesplus.category.vo.CategoryVO">
 		SELECT
 		dc.DETAIL_CATEGORY_ID AS detailCategoryId,
 		dc.FOREIGN_SUB_CATEGORY_ID AS foreignSubCategoryId,
