@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.hermesPlus.order.mapper.OrdersMapper">
+
+	<select id="selectOrderAll" resultType="com.shop.hermesPlus.order.vo.OrdersVO">
+		SELECT * FROM ORDERS
+	</select>
+	
+	<select id="selectOrder" resultType="com.shop.hermesPlus.order.vo.OrdersVO">
+		SELECT * FROM ORDERS WHERE OR_NUM = #{orNum}
+	</select>
+	
+	<insert id="insertOrder">
+		INSERT INTO ORDERS(OR_ID, UI_NUM, CI_NUM, OR_ITEM, 
+			OR_ITEM_COUNT, OR_TOTAL_AMOUNT, OR_ISPAID, OR_ISDELIVERIED, 
+			OR_ISCANCLED, OR_ISEXCHANGED, OR_ISRETURNED, OR_ISREFUNDED)
+		VALUES (#{orId}, #{uiNum}, #{ciNum}, #{orItem},
+			#{orItemCount}, #{orTotalAmount}, #{isPaid}, #{isDeliveried},
+			#{isCancled}, #{isExchanged}, #{isReturned}, #{isRefunded})
+	</insert>
+	
+	<update id="updateOrder">
+		UPDATE ORDERS
+		SET OR_ID = #{orId},
+			UI_NUM = #{uiNum},
+			CI_NUM = #{ciNum},
+			OR_ITEM = #{orItem},
+			OR_ITEM_COUNT = #{orItemCount},
+			OR_TOTAL_AMOUNT = #{orTotalAmount},
+			OR_ISPAID = #{isPaid},
+			OR_ISDELIVERIED = #{isDeliveried},
+			OR_ISCANCLED = #{isCancled},
+			OR_ISEXCHANGED = #{isExchanged}, 
+			OR_ISRETURNED = #{isReturned},
+			OR_ISREFUNDED = #{isRefunded}
+		WHERE OR_NUM = #{orNum}
+	</update>
+	
+	<delete id="deleteOrder">
+		DELETE FROM ORDERS WHERE OR_NUM = #{orNum}
+	</delete>
+
+</mapper>
