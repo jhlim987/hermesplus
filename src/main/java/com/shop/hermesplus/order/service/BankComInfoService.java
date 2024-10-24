@@ -1,12 +1,12 @@
-package com.shop.hermesPlus.order.service;
+package com.shop.hermesplus.order.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shop.hermesPlus.order.mapper.BankComInfoMapper;
-import com.shop.hermesPlus.order.vo.BankcomInfoVO;
+import com.shop.hermesplus.order.mapper.BankComInfoMapper;
+import com.shop.hermesplus.order.vo.BankcomInfoVO;
 
 @Service
 public class BankComInfoService {

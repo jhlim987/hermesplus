@@ -2,12 +2,12 @@ package com.shop.hermesplus.order.mapper;
 
 import java.util.List;
 
-import com.shop.hermesplus.order.vo.CardcomInfoVO;
+import com.shop.hermesplus.order.vo.BankcomInfoVO;
 
 public interface BankComInfoMapper {
-	List<CardcomInfoVO> selectBankcoms(CardcomInfoVO cardcom);
-	CardcomInfoVO selectBankcom(int cciNum);
-	int insertBankcom(CardcomInfoVO cardcom);
-	int updateBankcom(CardcomInfoVO cardcom);
-	int deleteBankcom(int cciNum);
+	List<BankcomInfoVO> selectBankcoms(BankcomInfoVO bankcom);
+	BankcomInfoVO selectBankcom(int bciNum);
+	int insertBankcom(BankcomInfoVO bankcom);
+	int updateBankcom(BankcomInfoVO bankcom);
+	int deleteBankcom(int bciNum);
 }
