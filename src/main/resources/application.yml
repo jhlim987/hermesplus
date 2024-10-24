@@ -18,7 +18,11 @@ spring:
       connection-init-sql: SELECT 1
       minimum-idle: 2
       maximum-pool-size: 4
+
 mybatis:
   mapper-locations: mapper/**/*.xml
   configuration:
     map-underscore-to-camel-case: true
+
+logging:
+  config: classpath:log4j.xml
