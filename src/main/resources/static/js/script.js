@@ -1,3 +1,4 @@
+// 사이트 전체 레이아웃 js
 var slideFooterSpeed = 100;
 var slideNavSpeed = 200;
 var overlayNavSpeed = 200;
