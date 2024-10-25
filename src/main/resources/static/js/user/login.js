@@ -1,12 +1,10 @@
 let pcFlag;
 let $userEmail=$('#uiEmail');
-let regEmail=/^[a-zA-Z0-9]([-_.]?\w+)*@[a-zA-Z0-9]([-_.]?[a-zA-Z0-9])*\.[a-zA-Z]{2,3}$/g;
+let regEmail=/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 checkDevice();
 mobileClass();
 $userEmail.on('blur', function(){
-    if(!regEmail.test($userEmail.val())){
-        $userEmail.popWarning("name@domain.com과 같은 형식의 유효한 이메일을 입력해 주세요.");
-    }
+  checkEmailValidation();
 });
 
 $.fn.popWarning = function(str){
@@ -32,6 +30,12 @@ $.fn.warningRequired = function(){
 $('.required-input').on( "focusout", function(){
     $(this).warningRequired();
 });
+function checkEmailValidation(){
+  if(!regEmail.test($userEmail.val())){
+    $userEmail.popWarning("name@domain.com과 같은 형식의 유효한 이메일을 입력해 주세요.");
+  }
+}
+
 
 //윈도우 리사이즈시 실행 영역 ---------------------
 
@@ -64,6 +68,9 @@ const pwdArea   			= document.getElementById('pwdArea');
 const userEmailLabel  = document.getElementById('userEmailLabel');
 const uiPwd   				= document.getElementById('uiPwd');
 let pwdFlag = false;
+
+
+
 function showPwd(){
   if(pwdFlag){
 	  uiPwd.type = 'password';
@@ -75,13 +82,14 @@ function showPwd(){
 }//비밀번호 보기에 관한 
 
 function checkEmail(){
+  console.log('눌렀음');
   let param = {
 		  uiEmail : uiEmail.value
   }
   param = JSON.stringify(param);
   const xhr = new XMLHttpRequest();
   xhr.open('POST','/user/checkEmail');
-  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onreadystatechange = function(){
     if(xhr.readyState === xhr.DONE){
       if(xhr.status === 200){
@@ -89,7 +97,7 @@ function checkEmail(){
         	toggleEmailPwd();
         }else{
         	//no account then create account
-        	//location.href="/views/user/create-account"
+        	location.href='/views/user/create-account'
         }
       }
     }
@@ -111,9 +119,9 @@ function login(){
       if(xhr.status === 200){
         const user = JSON.parse(xhr.responseText);
         if(user!=null){
-        	alert('로긴성공');
+          location.href = '/views/user/mypage';
         }else{
-        	alert('로긴실패');
+          toggleEmailPwd(true);
         }
       }
     }
@@ -121,9 +129,10 @@ function login(){
   xhr.send(param);
 }
 function toggleEmailPwd(flag){
+  console.log('패스워드 치는데 열자');
 	if(flag!=null){
 		uiEmail.value = '';
-	}//펑션의 인자값이 있으면 밸류 지워버림. 
+  }//펑션의 인자값이 있으면 밸류 지워버림. 
 	toggleDisabled(uiEmail);
 	uiEmail.classList.toggle("shorten-margin");
 	uiEmail.classList.toggle("disabled");

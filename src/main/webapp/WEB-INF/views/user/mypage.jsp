@@ -26,7 +26,9 @@
         <div class="bright-back-color   w-80p">
           <div class="title flex space-between">
             <h1 class="boxed-title">프로필 정보</h1>
-            <a href="">내 정보 수정</a>
+            <div class="relative">
+              <a href="/views/user/mypage-edit" class="absolute btn-circle back-color btn-icon btn-50px"><i class="icon-pen"></i><span>내 정보 수정</span></a>
+            </div>
           </div>
           <div class="flex">
 	          <div class="m-large w-50p left-border">
