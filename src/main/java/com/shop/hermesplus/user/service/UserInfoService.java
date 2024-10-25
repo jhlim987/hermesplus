@@ -26,14 +26,14 @@ public class UserInfoService {
         }
         return loginUser;
     }
-    public int selectEmail(UserInfoVO user) {
-        return userInfoMapper.selectEmail(user);
+    public int selectEmail(UserInfoVO userInfoVO) {
+        return userInfoMapper.selectEmail(userInfoVO);
     }
     public int updateUser(UserInfoVO userInfoVO){
         return 0;
     }
     public int insertUser(UserInfoVO userInfoVO){
-        return 0;
+        return userInfoMapper.insertUser(userInfoVO);
     }
     public int deleteUser(int uiNum){
         return 0;

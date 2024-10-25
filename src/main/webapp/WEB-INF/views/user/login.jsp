@@ -13,7 +13,6 @@
 <script src='/static/js/user/login.js' defer></script>
 
 <main id="main">
-  <button onclick="toggleEmailPwd()" type="button" class="btn btn-primary">바꿔봐</button>
   <div class="main-container">
     <div class="login-page-container">
       <h1 class="login-page-header">계정</h1>

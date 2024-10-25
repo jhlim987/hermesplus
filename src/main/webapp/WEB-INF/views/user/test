@@ -1,0 +1,31 @@
+private int uiNum
+uiFirstName
+uiLastName
+uiEmail
+uiPhone
+uiPwd
+uiGender
+uiBirth
+uiAddress
+uiDormant
+uiOut
+uiType
+credat
+cretim
+private int giNum
+
+userEmail
+userCountryCodes
+userPhone
+userPassword
+userFirstName
+userLastName
+userBirth
+
+
+uiEmail
+uiPhone
+uiPwd
+uiFirstName
+uiLastName
+uiBirth

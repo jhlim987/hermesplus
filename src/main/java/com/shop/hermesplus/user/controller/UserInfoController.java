@@ -30,4 +30,10 @@ public class UserInfoController {
     public UserInfoVO login(@RequestBody UserInfoVO user,HttpSession session) {
         return userInfoService.selectUser(user,session);
     }
+    
+    @ResponseBody
+    @PostMapping("/join")
+    public int join(@RequestBody UserInfoVO user ) {
+        return userInfoService.insertUser(user);
+    }
 }
