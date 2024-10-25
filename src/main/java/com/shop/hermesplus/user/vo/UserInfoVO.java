@@ -12,6 +12,7 @@ public class UserInfoVO {
     private String uiFirstName;
     private String uiLastName;
     private String uiEmail;
+    private String uiCountryCode;
     private String uiPhone;
     private String uiPwd;
     private String uiGender;

@@ -31,14 +31,9 @@
 						</div>
 						<div class="row">
 							<div class="col generic-input-box width90">
-								<input type="text" id="userCountryCodes" name="userFirstName"
-									class="generic-input required-input" required value="+82"
-									maxlength="5"> <label class="generic-label"
-									for="userFirstName">국가 코드 <span aria-hidden="true">
-										*</span></label>
-								<div class="warning-required">
-									<span>필수항목</span>
-								</div>
+								<input type="text" id="userCountryCodes" name="userCountryCodes" class="generic-input required-input" required value="+82" maxlength="5">
+								<label class="generic-label" for="userCountryCodes">국가 코드 <span aria-hidden="true">*</span></label>
+								<div class="warning-required"><span>필수항목</span></div>
 							</div>
 							<div class="col generic-input-box">
 								<input type="text" id="userPhone" name="userPhone"
@@ -48,23 +43,6 @@
 								<div class="warning-required"><span>필수항목</span></div>
 							</div>
 						</div>
-						<!-- 
-						<div class="generic-input-box row gap20 margin-bottom-37">
-							<div class="col-md-10">
-								<input type="text" id="userEmail" name="checkCode"
-									class="generic-input required-input margin-bottom-0" required>
-								<label
-									class="generic-label" for="checkCode">확인 코드 <span
-									aria-hidden="true"> *</span></label>
-								<div class="warning-required">
-									<span>필수항목</span>
-								</div>
-							</div>
-							<div class="col-md-2">
-								<button class="button-base-100 button-primary height-normal btn margin-bottom-0">코드 보내기</button>
-							</div>
-						</div>
-            -->
 						<div class="generic-input-box">
 							<input type="password" id="userPassword" name="userPassword" class="generic-input zero-margin required-input" required>
 							<label class="generic-label" for="userPassword">비밀번호 <span aria-hidden="true"> *</span></label>
@@ -172,7 +150,6 @@ $('#userPassword2').blur(function(){
 	}
 })
 
-var loadedReviewFlag = false;
 function join(obj){
   const uiEmail     =   document.getElementById('userEmail').value        ;
   const uiPhone     =   document.getElementById('userCountryCodes').value +  document.getElementById('userPhone').value;

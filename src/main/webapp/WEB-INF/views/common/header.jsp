@@ -119,7 +119,14 @@
             <li>
                <button class="menubtns">
                   <i class="nav-user"></i>
-                  <a href="/views/user/login">로그인</a>
+                  <c:choose>
+								    <c:when test="${user != null}">
+								      <a href="/views/user/mypage">마이페이지</a>
+								    </c:when>
+								    <c:otherwise>
+								      <a href="/views/user/login">로그인</a>
+								    </c:otherwise>
+									</c:choose>
                </button>
             </li>
             <li>

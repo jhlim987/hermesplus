@@ -1,6 +1,21 @@
-@charset "UTF-8";
+@charset "UTF-8";@charset "UTF-8";
+.m-auto{
+	margin:auto;
+}
+.margin-bottom-50{
+	margin-bottom:50px;
+}
+.margin-top-10 {
+  margin-top: 10px !important;
+}
+.margin-top-20 {
+  margin-top: 20px !important;
+}
+.margin-top-30 {
+  margin-top: 30px !important;
+}
 .margin-top-60 {
-    margin-top: 60px !important;
+  margin-top: 60px !important;
 }
 .page-side-list{
 	margin-top:20px;
@@ -78,7 +93,7 @@ dd{
   top:13px;
   left:15px;
   position:relative;
-    
+  
 }
 .space-between{
   justify-content: space-between;
@@ -89,10 +104,37 @@ dd{
 input[type=checkbox]{
 	width:20px;
 	height:20px;
+	margin:0;
+	position:relative;
+	top:5px;
+	cursor:pointer;
 }
+
+label[for=newsletter]{
+	display:block;
+	margin-left:10px;
+	cursor:pointer;
+}
+.light-color{
+	background-color:var(--border-color);
+	height: 1px;
+  border: none;
+}
+.button-outline-primary{
+  background: none;
+  border: 1px solid #444;
+  color: #444;
+  text-decoration: none;
+  line-height: calc((var(--font-size-cta)* 1.5) -(0* 2));
+}
+
+
 .user{
   color: var(--gray-color);
 }
 .main-container .body{
-	padding:25px;
+	padding:25px 25px 0;
+}
+.button-base{
+	font-weight:normal;
 }

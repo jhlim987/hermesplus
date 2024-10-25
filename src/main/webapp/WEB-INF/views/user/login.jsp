@@ -29,7 +29,7 @@
           <input type="checkbox" class="hidden" id="showPwdInput" onclick="showPwd()">
            <label for="showPwdInput" class="ta-right fs-5 margin-bottom-0 text-decoration-underline block" id="showPwdLabel">보기</label>
           <div class="generic-input-box">
-            <input type="text" id="uiPwd" name="userPassword" class="generic-input zero-margin required-input" required>
+            <input type="password" id="uiPwd" name="userPassword" class="generic-input zero-margin required-input" required>
             <label class="generic-label" for="userPassword">비밀번호 <span aria-hidden="true"> *</span></label>
             <div class="warning-required"><span>필수항목</span></div>
           </div>
