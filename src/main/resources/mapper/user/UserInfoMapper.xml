@@ -7,4 +7,16 @@
   <select id="selectUserForLogin">
     SELECT * FROM user_info WHERE UI_EMAIL = #{uiEmail} AND UI_PWD = #{uiPwd};
   </select>
+  <insert id="insertUser">
+  	INSERT INTO user_info (
+  	UI_FIRST_NAME, UI_LAST_NAME, UI_EMAIL, UI_COUNTRY_CODE, 
+  	UI_PHONE, UI_PWD, UI_GENDER, UI_BIRTH, 
+  	UI_ADDRESS
+  	) VALUES (
+  	#{uiFirstName},#{uiLastName},#{uiEmail},#{uiCountryCode},
+  	#{uiPhone},#{uiPwd},#{uiGender},#{uiBirth},
+  	#{uiAddress}
+  	);
+SELECT LAST_INSERT_ID();
+  </insert>
 </mapper>

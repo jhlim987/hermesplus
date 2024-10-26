@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/views/common/header.jsp" %>
 
    <!-- 로컬 CSS -->
-   <link rel='stylesheet' href='/static/css/login.css' />
+   <link rel='stylesheet' href='/static/css/user/user.css' />
 
    <!-- 로컬 js -->
    <script src='/static/js/script.js' defer></script>
@@ -29,19 +29,25 @@
 								<span>필수항목</span>
 							</div>
 						</div>
+						<div class="info hide" id="emailInfo">
+							<p class="text-xxsmall">johndoe@email.com 형식으로 작성해 주십시오.</p>
+						</div>
 						<div class="row">
 							<div class="col generic-input-box width90">
-								<input type="text" id="userCountryCodes" name="userCountryCodes" class="generic-input required-input" required value="+82" maxlength="5">
-								<label class="generic-label" for="userCountryCodes">국가 코드 <span aria-hidden="true">*</span></label>
+								<input type="tel" id="uiCountryCode" name="uiCountryCode" class="generic-input required-input" required value="+82" maxlength="5">
+								<label class="generic-label" for="uiCountryCode">국가 코드 <span aria-hidden="true">*</span></label>
 								<div class="warning-required"><span>필수항목</span></div>
 							</div>
 							<div class="col generic-input-box">
-								<input type="text" id="userPhone" name="userPhone"
+								<input type="tel" id="userPhone" name="userPhone"
 									class="generic-input required-input" required> <label
 									class="generic-label" for="userPhone">휴대전화 <span
 									aria-hidden="true"> *</span></label>
 								<div class="warning-required"><span>필수항목</span></div>
 							</div>
+						</div>
+						<div class="info hide" id="phoneInfo">
+							<p class="text-xxsmall">휴대폰번호의 첫 자리 0을 제외하고 1부터 작성해 주십시오.</p>
 						</div>
 						<div class="generic-input-box">
 							<input type="password" id="userPassword" name="userPassword" class="generic-input zero-margin required-input" required>
@@ -149,10 +155,59 @@ $('#userPassword2').blur(function(){
 		$('#pwdWarning').toggleClass('show');
 	}
 })
+$('#userPhone').on('focus', function(event){
+	$('#phoneInfo').toggleClass('hide');
+});
 
+$('#userEmail').blur(function(event){
+	const email = $(this).val();
+	const emailCheck = RegExp('^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$');
+	console.log(emailCheck.test(email) );
+	if(emailCheck.test(email) == false && email.length>0) {
+		$('#emailInfo').removeClass('hide');
+		$('#userEmail').focus();
+	}else{
+		$('#emailInfo').addClass('hide');
+	}
+});
+$('#userEmail').on('focus',function(event){
+	$('#emailInfo').removeClass('hide');
+});
+$('#userPhone').blur(function(event){
+	const $this = $(this);
+	let str = $this.val();
+	if(str.indexOf(0)=='0'){
+		str = str.substring(1);
+		$this.val(str);
+	}
+});
+$('#userPhone').on( "keydown", function( event ) {
+	const $this = $(this);
+	let str = $this.val();
+	console.log(event.which)
+	if ( event.which == 96 && str.length < 1 ) {
+		event.preventDefault();
+	}
+});
+$( "#uiCountryCode" ).on( "keydown", function( event ) {
+	event.preventDefault();
+	let str = $(this).val();
+	console.log('현재 국가코드: '+str.substring(1));
+	if ( event.which == 8 && str.length < 2 ) {
+		event.preventDefault();
+		$(this).val('+');
+		console.log('한글자여');
+	}else if( !(event.which >47 && event.which<58)){
+		str = str.substring(str.length-1, -1);
+		$(this).val(str);
+	}
+	
+	//숫자만 넣게 하고 싶다....
+});
 function join(obj){
   const uiEmail     =   document.getElementById('userEmail').value        ;
-  const uiPhone     =   document.getElementById('userCountryCodes').value +  document.getElementById('userPhone').value;
+  const uiCountryCode=  document.getElementById('uiCountryCode').value;
+  const uiPhone     =   document.getElementById('userPhone').value;
   const uiPwd       =   document.getElementById('userPassword').value     ;
   const uiGender    =   document.getElementById('gender').value     ;
   const uiFirstName =   document.getElementById('userFirstName').value    ;
@@ -168,15 +223,15 @@ function join(obj){
   console.log(uiBirth);
   if(test){
     const param = {
-    		uiEmail     :   uiEmail,
-    		uiPhone     :   uiPhone,
-    		uiPwd       :   uiPwd,
-    		uiGender    :   uiGender,
-    		uiFirstName :   uiFirstName,
-    		uiLastName  :   uiLastName,
-    		uiBirth     :   uiBirth,
-    		uiAddress   :   uiAddress,
-    		giNum       :   1
+    		uiFirstName  :   uiFirstName,
+    		uiLastName   :   uiLastName,
+    		uiEmail      :   uiEmail,
+    		uiCountryCode:   uiCountryCode,
+    		uiPhone      :   uiPhone,
+    		uiPwd        :   uiPwd,
+    		uiGender     :   uiGender,
+    		uiBirth      :   uiBirth,
+    		uiAddress    :   uiAddress,
     }
     const cof = {
       method    : 'post',
