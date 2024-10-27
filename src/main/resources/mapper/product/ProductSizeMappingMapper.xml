@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.hermesplus.product.mapper.ProductSizeMappingMapper">
+
+    <!-- Select Product Size Mapping by Product ID -->
+    <select id="selectProductSizeMappings" resultType="com.shop.hermesplus.product.vo.ProductSizeMappingVO">
+        SELECT *
+        FROM product_size_mapping
+    </select>
+
+    <select id="selectProductSizeMapping" resultType="com.shop.hermesplus.product.vo.ProductSizeMappingVO">
+        SELECT *
+        FROM product_size_mapping
+        WHERE PI_ID = #{piId}
+    </select>
+
+    <!-- Insert Product Size Mapping --> 
+    <insert id="insertProductSizeMapping">
+        INSERT INTO product_size_mapping (
+            PI_ID,
+            PS_ID
+        ) VALUES (
+            #{piId},
+            #{psId}
+        )
+    </insert>
+
+    <!-- Update Product Size Mapping -->
+    <update id="updateProductSizeMapping">
+        UPDATE product_size_mapping
+        SET
+            PS_ID = #{psId}
+        WHERE PSM_ID = #{psmId}
+    </update>
+
+    <!-- Delete Product Size Mapping by Product ID -->
+    <delete id="deleteProductSizeMapping">
+        DELETE FROM product_size_mapping
+        WHERE PI_ID = #{piId}
+    </delete>
+
+</mapper>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.hermesplus.product.mapper.ProductColorMappingMapper">
+	<!-- Select Product Color Mapping by Product ID -->
+	<select id="selectProductColorMappings" resultType="com.shop.hermesplus.product.vo.ProductColorMappingVO">
+        SELECT *
+        FROM product_color_mapping
+    </select>
+    <select id="selectProductColorMapping" resultType="com.shop.hermesplus.product.vo.ProductColorMappingVO">
+        SELECT *
+        FROM product_color_mapping
+        WHERE PI_ID = #{piId}
+    </select>
+
+    <!-- Insert Product Color Mapping -->
+    <insert id="insertProductColorMapping">
+        INSERT INTO product_color_mapping (
+            PI_ID,
+            PC_ID
+        ) VALUES (
+            #{piId},
+            #{pcId}
+        )
+    </insert>
+
+    <!-- Update Product Color Mapping -->
+    <update id="updateProductColorMapping">
+        UPDATE product_color_mapping
+        SET
+            PC_ID = #{pcId}
+        WHERE PCM_ID = #{pcmId}
+    </update>
+
+    <!-- Delete Product Color Mapping by Product ID -->
+    <delete id="deleteProductColorMapping">
+        DELETE FROM product_color_mapping
+        WHERE PI_ID = #{piId}
+    </delete>
+	
+</mapper>
