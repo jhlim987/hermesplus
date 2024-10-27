@@ -48,7 +48,7 @@
             loadSizes();
         };
 
-        // 사이즈 목록을 가져오는 함수
+     // 사이즈 목록을 가져오는 함수
         function loadSizes() {
             // 부모 창에서 전달된 선택된 사이즈 목록 가져오기
             const urlParams = new URLSearchParams(window.location.search);
@@ -58,27 +58,28 @@
                 .then(response => {
                     const sizes = response.data; // 사이즈 목록 (JSON 데이터)
                     const sizeTableBody = document.getElementById('sizeTableBody');
-                    
+
                     // 사이즈 데이터를 사용하여 체크박스를 동적으로 생성
                     sizes.forEach(size => {
                         const tr = document.createElement('tr');
                         const td = document.createElement('td');
-                        
+
                         // 체크박스와 레이블을 생성하여 td에 추가
                         const div = document.createElement('div');
                         div.className = 'form-check';
-                        
+
                         const checkbox = document.createElement('input');
                         checkbox.type = 'checkbox';
                         checkbox.className = 'form-check-input';
                         checkbox.value = size.psName;
+                        checkbox.dataset.sizeId = size.psId;  // 사이즈 ID 추가
                         checkbox.id = `size${size.psId}`;
-                        
+
                         // 전달된 선택된 사이즈에 따라 체크박스 상태 설정
-                        if (selectedSizes.includes(size.psName)) {
+                        if (selectedSizes.some(selectedSize => selectedSize.id === size.psId)) {
                             checkbox.checked = true;
                         }
-                        
+
                         const label = document.createElement('label');
                         label.className = 'form-check-label';
                         label.htmlFor = `size${size.psId}`;
@@ -100,12 +101,15 @@
                 });
         }
 
-        // 부모 창에 선택된 사이즈 결과를 반영하는 함수
+     // 부모 창에 선택된 사이즈 결과를 반영하는 함수
         function submitSizes() {
             const selectedSizes = [];
             const checkboxes = document.querySelectorAll("#sizeOptions input[type='checkbox']:checked");
             checkboxes.forEach(checkbox => {
-                selectedSizes.push(checkbox.value);
+                selectedSizes.push({
+                    id: parseInt(checkbox.dataset.sizeId),  // 사이즈 ID
+                    name: checkbox.value  // 사이즈 이름
+                });
             });
 
             // 부모 창의 updateSizes 함수 호출

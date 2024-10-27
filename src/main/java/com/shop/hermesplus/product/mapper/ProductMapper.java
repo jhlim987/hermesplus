@@ -9,7 +9,7 @@ import com.shop.hermesplus.product.vo.ProductVO;
 @Mapper
 public interface ProductMapper {
 	List<ProductVO> selectProducts(ProductVO product);
-	ProductVO selectProduct(int psId);
+	ProductVO selectProduct(ProductVO product);
 	int insertProduct(ProductVO product);
 	int updateProduct(ProductVO product);
 	int deleteProduct(int pId);

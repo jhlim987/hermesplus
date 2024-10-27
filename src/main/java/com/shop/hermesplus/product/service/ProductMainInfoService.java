@@ -32,4 +32,8 @@ public class ProductMainInfoService {
 	    public int deleteProductMainInfo(int pmiId) {
 	        return productMainInfoMapper.deleteProductMainInfo(pmiId);
 	    }
+	 // 주요 정보 저장
+	    public int addProductMainInfo(ProductMainInfoVO mainInfoVO) {
+	        return productMainInfoMapper.insertProductMainInfo(mainInfoVO);
+	    }
 }

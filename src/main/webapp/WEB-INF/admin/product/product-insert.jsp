@@ -89,7 +89,8 @@
 							</tr>
 							<tr>
 								<th class="text-center" style="border-right: 1px solid #ccc;">가격</th>
-								<td><input type="number" min="0" class="form-control" id="piPrice"></td>
+								<td><input type="number" min="0" class="form-control"
+									id="piPrice"></td>
 							</tr>
 							<tr>
 								<th class="text-center" style="border-right: 1px solid #ccc;">색상</th>
@@ -160,7 +161,8 @@
 							</tr>
 							<tr>
 								<th class="text-center" style="border-right: 1px solid #ccc;">제조국</th>
-								<td><input type="text" class="form-control" id="piCountryOfOrigin"></td>
+								<td><input type="text" class="form-control"
+									id="piCountryOfOrigin"></td>
 							</tr>
 							<tr>
 								<th class="text-center" style="border-right: 1px solid #ccc;">스토리
@@ -183,7 +185,8 @@
 							<tr>
 								<th colspan="2" class="text-center"
 									style="border-right: 1px solid #ccc;">
-									<button type="button" class="btn btn-primary me-2" onclick="addProduct()">제품등록</button>
+									<button type="button" class="btn btn-primary me-2"
+										onclick="addProduct()">제품등록</button>
 								</th>
 							</tr>
 						</table>
@@ -198,8 +201,109 @@
 <!-- [ Main Content ] end -->
 <script>
 //상품 DB에 등록
-function addProduct(){
-	
+async function addProduct() {
+    try {
+        // 1. 제품 정보 수집
+        const productData = {
+            piCode: document.getElementById("piCode").value,
+            piName: document.getElementById("piName").value,
+            piPrice: document.getElementById("piPrice").value,
+            piCountryOfOrigin: document.getElementById("piCountryOfOrigin").value,
+            piMainCategoryId: parseInt(document.getElementById("mainCategorySelect").value),
+            piSubCategoryId: parseInt(document.getElementById("subCategorySelect").value),
+            piDetailCategoryId: parseInt(document.getElementById("detailCategorySelect").value),
+            piStory: document.getElementById("piStory").value,
+            colorIds: Array.from(document.querySelectorAll("#colorInputContainer input"))
+                .map(input => parseInt(input.value))
+                .filter(value => !isNaN(value)),
+            sizeIds: Array.from(document.querySelectorAll("#sizeInputContainer input"))
+                .map(input => parseInt(input.dataset.sizeId))  // 사이즈 ID를 사용하도록 변경
+                .filter(value => !isNaN(value)),
+            materialIds: Array.from(document.querySelectorAll("#selectedMaterial"))
+                .map(input => parseInt(input.getAttribute('data-material-id')))
+                .filter(value => !isNaN(value)),
+            mainInfos: Array.from(document.querySelectorAll("#inputContainer input"))
+                .map(input => input.value)
+                .filter(value => value !== "")
+        };
+
+        // 이미지 파일 추가
+        const imageFiles = document.getElementById("imageUpload").files;
+        const formData = new FormData();
+        formData.append("productData", new Blob([JSON.stringify(productData)], { type: "application/json" }));
+        for (let i = 0; i < imageFiles.length; i++) {
+            formData.append("images", imageFiles[i]);
+        }
+
+        // FormData 값 출력 (디버깅 용도)
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ', ' + pair[1]);
+        }
+
+        // 2. 제품 정보 서버에 저장 (ProductController 호출)
+        const productResponse = await axios.post('/product', formData, {
+            headers: { 'Content-Type': 'multipart/form-data' }
+        });
+
+        if (productResponse.status !== 200) {
+            alert('상품 등록 중 오류가 발생했습니다. 다시 시도해주세요.');
+            return;
+        }
+
+        alert('상품이 성공적으로 등록되었습니다!');
+    } catch (error) {
+        console.error('상품 등록 중 오류 발생:', error);
+        alert('상품 등록 중 오류가 발생했습니다.');
+    }
+}
+
+//각 속성 정보를 연결 테이블에 저장하는 함수들
+async function saveProductColor(productId, colorId) {
+    try {
+        await axios.post('/productColorMapping', {
+            piId: productId,
+            pcId: colorId
+        });
+        console.log(`제품 ID ${productId}에 색상 ID ${colorId}가 저장되었습니다.`);
+    } catch (error) {
+        console.error('색상 정보 저장 중 오류:', error);
+    }
+}
+
+async function saveProductSize(productId, sizeId) {
+    try {
+        await axios.post('/productSizeMapping', {
+            piId: productId,
+            psId: sizeId
+        });
+        console.log(`제품 ID ${productId}에 사이즈 ID ${sizeId}가 저장되었습니다.`);
+    } catch (error) {
+        console.error('사이즈 정보 저장 중 오류:', error);
+    }
+}
+
+async function saveProductMaterial(productId, materialId) {
+    try {
+        await axios.post('/productMaterialMapping', {
+            piId: productId,
+            pmId: materialId
+        });
+        console.log(`제품 ID ${productId}에 소재 ID ${materialId}가 저장되었습니다.`);
+    } catch (error) {
+        console.error('소재 정보 저장 중 오류:', error);
+    }
+}
+
+async function saveProductMainInfo(productId, mainInfo) {
+    try {
+        await axios.post('/productMainInfo', {
+            piId: productId,
+            mainInfo: mainInfo
+        });
+        console.log(`제품 ID ${productId}에 주요 정보가 저장되었습니다: ${mainInfo}`);
+    } catch (error) {
+        console.error('주요 정보 저장 중 오류:', error);
+    }
 }
 
 //이미지 미리보기
@@ -256,7 +360,6 @@ function previewImages() {
     function loadMaterialCare(materialId) {
         axios.get(`/productCareDescs?materialId=${materialId}`)
             .then(response => {
-                console.log("응답 데이터 구조 확인:", response.data); // 응답 데이터 구조 확인용
                 
                 let careDescription = "";
 
@@ -323,20 +426,21 @@ function openSizeSelection() {
         window.open("product-insert-size", "사이즈 선택", `width=${width},height=${height},top=${top},left=${left}`);
     }
 
-    // 선택된 사이즈를 부모 창의 사이즈 필드에 추가
-    function updateSizes(selectedSizes) {
-        const sizeInputContainer = document.getElementById("sizeInputContainer");
-        sizeInputContainer.innerHTML = ""; // 기존의 input 필드를 모두 지웁니다.
+//선택된 사이즈를 부모 창의 사이즈 필드에 추가
+function updateSizes(selectedSizes) {
+    const sizeInputContainer = document.getElementById("sizeInputContainer");
+    sizeInputContainer.innerHTML = ""; // 기존의 input 필드를 모두 지웁니다.
 
-        selectedSizes.forEach(size => {
-            const newInput = document.createElement("input");
-            newInput.type = "text";
-            newInput.value = size;
-            newInput.className = "form-control mb-2";
-            newInput.readOnly = true;
-            sizeInputContainer.appendChild(newInput);
-        });
-    }
+    selectedSizes.forEach(size => {
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.value = size.name;  // 사이즈 이름
+        newInput.dataset.sizeId = size.id;  // 사이즈 ID를 data-size-id 속성에 저장
+        newInput.className = "form-control mb-2";
+        newInput.readOnly = true;
+        sizeInputContainer.appendChild(newInput);
+    });
+}
 
 
 
@@ -506,13 +610,17 @@ function openSizeSelection() {
 		xhr.send();
 	}
 
-	// 페이지 로드 시 메인 카테고리 로드
+	// 페이지 로드 시 메인 카테고리 로드 및 버튼 이벤트 등록
 	window.onload = function() {
-		loadMainCategories();
-	};
+    loadMainCategories();
+    const addButton = document.getElementById("addProductButton");
+    if (addButton) {
+        addButton.onclick = function() {
+            addProduct();
+        };
+    }
+};
 </script>
 
 
-
-<script src="/assets/js/plugins/simple-datatables.js"></script>
 <%@ include file="/WEB-INF/admin/common/footer.jsp"%>

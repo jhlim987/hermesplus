@@ -17,27 +17,27 @@
 	</select>
 
 	<!-- Insert Product -->
-	<insert id="insertProduct">
-		INSERT INTO product (
-		PI_CODE,
-		PI_NAME,
-		PI_PRICE,
-		PI_COUNTRY_OF_ORIGIN,
-		PI_STORY
-		PI_MAIN_CATEGORY_ID,
-		PI_SUB_CATEGORY_ID,
-		PI_DETAIL_CATEGORY_ID
-		) VALUES (
-		#{piCode},
-		#{piName},
-		#{piPrice},
-		#{piCountryOfOrigin},
-		#{piStory},
-		#{piMainCategoryId},
-		#{piSubCategoryId},
-		#{piDetailCategoryId}
-		)
-	</insert>
+	<insert id="insertProduct" parameterType="com.shop.hermesplus.product.vo.ProductVO" useGeneratedKeys="true" keyProperty="piId">
+    INSERT INTO product (
+        PI_CODE,
+        PI_NAME,
+        PI_PRICE,
+        PI_COUNTRY_OF_ORIGIN,
+        PI_STORY,
+        PI_MAIN_CATEGORY_ID,
+        PI_SUB_CATEGORY_ID,
+        PI_DETAIL_CATEGORY_ID
+    ) VALUES (
+        #{piCode},
+        #{piName},
+        #{piPrice},
+        #{piCountryOfOrigin},
+        #{piStory},
+        #{piMainCategoryId},
+        #{piSubCategoryId},
+        #{piDetailCategoryId}
+    )
+</insert>
 	
 	 <!-- Update Product -->
     <update id="updateProduct">

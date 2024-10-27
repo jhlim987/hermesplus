@@ -100,7 +100,7 @@
           <ul class="pc-submenu">
             <li class="pc-item"><a class="pc-link" href="/admin/product/product-dashboard">상품 대시보드</a></li>
             <li class="pc-item"><a class="pc-link" href="">상품 목록</a></li>
-            <li class="pc-item"><a class="pc-link" href="">상품 등록</a></li>
+            <li class="pc-item"><a class="pc-link" href="/admin/product/product-insert">상품 등록</a></li>
             <li class="pc-item"><a class="pc-link" href="">상품 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">분류 관리</a></li>
             <li class="pc-item"><a class="pc-link" href="">상품 진열</a></li>
