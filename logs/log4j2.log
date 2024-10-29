@@ -1,32 +1,17 @@
-[2024-10-28 00:45:10.844]  INFO 31368--- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
-[2024-10-28 00:45:10.849]  INFO 31368--- [     Thread-330] o.a.c.h.Http11NioProtocol                : Pausing ProtocolHandler ["http-nio-81"]
-[2024-10-28 00:45:10.849]  INFO 31368--- [     Thread-330] o.a.c.c.StandardService                  : Stopping service [Tomcat]
-[2024-10-28 00:45:10.849]  INFO 31368--- [     Thread-330] o.a.c.c.C.[.[.[/]                        : Destroying Spring FrameworkServlet 'dispatcherServlet'
-[2024-10-28 00:45:10.850]  WARN 31368--- [     Thread-330] o.a.c.l.WebappClassLoaderBase            : The web application [ROOT] appears to have started a thread named [HikariPool-13 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
- java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
- java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
- java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
- java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
- java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
- java.base@17.0.12/java.lang.Thread.run(Thread.java:842)
-[2024-10-28 00:45:10.850]  INFO 31368--- [     Thread-330] o.a.c.h.Http11NioProtocol                : Stopping ProtocolHandler ["http-nio-81"]
-[2024-10-28 00:45:10.850]  INFO 31368--- [     Thread-330] o.a.c.h.Http11NioProtocol                : Destroying ProtocolHandler ["http-nio-81"]
-[2024-10-28 00:45:10.943]  INFO 31368--- [  restartedMain] c.s.h.HermesplusApplication              : Starting HermesplusApplication using Java 17.0.12 on DESKTOP-SJKF1VK with PID 31368 (C:\Users\User\git\hermesplus\bin\main started by User in C:\Users\User\git\hermesplus)
-[2024-10-28 00:45:10.943]  INFO 31368--- [  restartedMain] c.s.h.HermesplusApplication              : No active profile set, falling back to 1 default profile: "default"
-[2024-10-28 00:45:11.032]  INFO 31368--- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$8a1356e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2024-10-28 00:45:11.032]  INFO 31368--- [  restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-[2024-10-28 00:45:11.083]  INFO 31368--- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 81 (http)
-[2024-10-28 00:45:11.083]  INFO 31368--- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-81"]
-[2024-10-28 00:45:11.083]  INFO 31368--- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
-[2024-10-28 00:45:11.083]  INFO 31368--- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.83]
-[2024-10-28 00:45:11.135]  INFO 31368--- [  restartedMain] o.a.j.s.TldScanner                       : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[2024-10-28 00:45:11.136]  INFO 31368--- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
-[2024-10-28 00:45:11.136]  INFO 31368--- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 193 ms
-[2024-10-28 00:45:11.414]  INFO 31368--- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-[2024-10-28 00:45:11.422]  INFO 31368--- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-81"]
-[2024-10-28 00:45:11.424]  INFO 31368--- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 81 (http) with context path ''
-[2024-10-28 00:45:11.425]  INFO 31368--- [  restartedMain] c.s.h.HermesplusApplication              : Started HermesplusApplication in 0.492 seconds (JVM running for 13604.331)
-[2024-10-28 00:45:11.426]  INFO 31368--- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+[2024-10-29 23:55:05.064]  INFO 6740--- [p-nio-81-exec-1] c.s.h.c.a.LogAOP                         : goAdmin around before
+[2024-10-29 23:55:05.065]  INFO 6740--- [p-nio-81-exec-1] c.s.h.c.a.LogAOP                         : goAdmin 실행 전!
+[2024-10-29 23:55:05.065]  INFO 6740--- [p-nio-81-exec-1] c.s.h.c.a.LogAOP                         : goAdmin 실행 후!
+[2024-10-29 23:55:05.065]  INFO 6740--- [p-nio-81-exec-1] c.s.h.c.a.LogAOP                         : goAdmin around after
+[2024-10-29 23:55:05.112]  INFO 6740--- [p-nio-81-exec-2] c.s.h.c.a.LogAOP                         : getProductColors 실행 전!
+[2024-10-29 23:55:12.676]  INFO 6740--- [p-nio-81-exec-3] c.s.h.c.a.LogAOP                         : goAdmin around before
+[2024-10-29 23:55:12.677]  INFO 6740--- [p-nio-81-exec-3] c.s.h.c.a.LogAOP                         : goAdmin 실행 전!
+[2024-10-29 23:55:12.677]  INFO 6740--- [p-nio-81-exec-3] c.s.h.c.a.LogAOP                         : goAdmin 실행 후!
+[2024-10-29 23:55:12.677]  INFO 6740--- [p-nio-81-exec-3] c.s.h.c.a.LogAOP                         : goAdmin around after
+[2024-10-29 23:55:12.733]  INFO 6740--- [p-nio-81-exec-7] c.s.h.c.a.LogAOP                         : getProductSizes 실행 전!
+[2024-10-29 23:55:23.802]  INFO 6740--- [p-nio-81-exec-4] c.s.h.c.a.LogAOP                         : goAdmin around before
+[2024-10-29 23:55:23.802]  INFO 6740--- [p-nio-81-exec-4] c.s.h.c.a.LogAOP                         : goAdmin 실행 전!
+[2024-10-29 23:55:23.802]  INFO 6740--- [p-nio-81-exec-4] c.s.h.c.a.LogAOP                         : goAdmin 실행 후!
+[2024-10-29 23:55:23.802]  INFO 6740--- [p-nio-81-exec-4] c.s.h.c.a.LogAOP                         : goAdmin around after
+[2024-10-29 23:55:23.855]  INFO 6740--- [p-nio-81-exec-6] c.s.h.c.a.LogAOP                         : getProductMaterials 실행 전!
+[2024-10-29 23:55:27.409]  INFO 6740--- [p-nio-81-exec-8] c.s.h.c.a.LogAOP                         : getProductCareDescs 실행 전!
+[2024-10-29 23:55:33.625]  INFO 6740--- [p-nio-81-exec-5] c.s.h.c.a.LogAOP                         : addProduct 실행 전!

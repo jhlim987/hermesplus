@@ -25,4 +25,7 @@ public class ProductVO {
     private List<Integer> sizeIds;
     private List<Integer> materialIds;
     private List<String> mainInfos;
+
+    // ProductDetailInfoVO 필드 추가
+    private ProductDetailInfoVO productDetailInfo;
 }

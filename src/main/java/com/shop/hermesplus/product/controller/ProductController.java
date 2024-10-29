@@ -18,48 +18,51 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.shop.hermesplus.product.service.ProductService;
+import com.shop.hermesplus.product.vo.ProductDetailInfoVO;
 import com.shop.hermesplus.product.vo.ProductVO;
 
 @RestController
 public class ProductController {
 
-	@Autowired
-	private ProductService productService;
+    @Autowired
+    private ProductService productService;
 
-	@PostMapping("/product")
-	public ResponseEntity<String> addProduct(
-	        @RequestPart("productData") String productData,
-	        @RequestPart("images") List<MultipartFile> images) {
-	    try {
-	        ObjectMapper objectMapper = new ObjectMapper();
-	        ProductVO productVO = objectMapper.readValue(productData, ProductVO.class);
+    @PostMapping("/product")
+    public ResponseEntity<String> addProduct(
+            @RequestPart("productData") String productData,
+            @RequestPart("images") List<MultipartFile> images) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            ProductVO productVO = objectMapper.readValue(productData, ProductVO.class);
 
-	        productService.insertProductWithDetails(productVO, images, productVO.getColorIds(), productVO.getSizeIds(), productVO.getMaterialIds(), productVO.getMainInfos());
+            // ProductDetailInfo 설정
+            ProductDetailInfoVO productDetailInfo = productVO.getProductDetailInfo();
+            productService.insertProductWithDetails(productVO, images, productVO.getColorIds(), productVO.getSizeIds(), productVO.getMaterialIds(), productVO.getMainInfos(), productDetailInfo);
 
-	        return ResponseEntity.ok("상품이 성공적으로 등록되었습니다.");
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("상품 등록 중 오류가 발생했습니다.");
-	    }
-	}
+            return ResponseEntity.ok("상품이 성공적으로 등록되었습니다.");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("상품 등록 중 오류가 발생했습니다.");
+        }
+    }
 
-	@GetMapping("/product")
-	public List<ProductVO> getProducts(ProductVO product) {
-		return productService.selectProducts(product);
-	}
+    @GetMapping("/product")
+    public List<ProductVO> getProducts(ProductVO product) {
+        return productService.selectProducts(product);
+    }
 
-	@GetMapping("/product/{piId}")
-	public ProductVO getProduct(ProductVO product) {
-		return productService.selectProduct(product);
-	}
+    @GetMapping("/product/{piId}")
+    public ProductVO getProduct(ProductVO product) {
+        return productService.selectProduct(product);
+    }
 
-	@PutMapping("/product")
-	public int updateProduct(@RequestBody ProductVO product) {
-		return productService.updateProduct(product);
-	}
+    @PutMapping("/product")
+    public int updateProduct(@RequestBody ProductVO product) {
+        return productService.updateProduct(product);
+    }
 
-	@DeleteMapping("/product/{piId}")
-	public int deleteProduct(@PathVariable int piId) {
-		return productService.deleteProduct(piId);
-	}
+    @DeleteMapping("/product/{piId}")
+    public int deleteProduct(@PathVariable int piId) {
+        return productService.deleteProduct(piId);
+    }
 }

@@ -67,7 +67,8 @@
                         const checkbox = document.createElement('input');
                         checkbox.type = 'checkbox';
                         checkbox.className = 'form-check-input';
-                        checkbox.value = color.pcName;
+                        checkbox.value = color.pcId; // 색상 ID를 값으로 설정
+                        checkbox.dataset.colorName = color.pcName; // 색상 이름 저장
                         checkbox.id = `color${color.pcId}`;
                         
                         const label = document.createElement('label');
@@ -87,7 +88,7 @@
                 })
                 .catch(error => {
                     console.error('색상 데이터를 불러오는 중 오류 발생:', error);
-                    alert('색상 데이터를 불러오는 중 오류가 발생했습니다. 관리자에게 문의하세요.');
+                    alert('색상 데이터를 불러오는 중 오류가 발생했습니다. 관리자에게 묻어주세요.');
                 });
         }
 
@@ -96,7 +97,10 @@
             const selectedColors = [];
             const checkboxes = document.querySelectorAll("#colorOptions input[type='checkbox']:checked");
             checkboxes.forEach(checkbox => {
-                selectedColors.push(checkbox.value);
+                selectedColors.push({
+                    id: checkbox.value, // 색상 ID
+                    name: checkbox.dataset.colorName // 색상 이름
+                });
             });
 
             // 부모 창의 updateColors 함수 호출

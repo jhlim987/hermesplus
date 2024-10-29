@@ -213,18 +213,22 @@ async function addProduct() {
             piSubCategoryId: parseInt(document.getElementById("subCategorySelect").value),
             piDetailCategoryId: parseInt(document.getElementById("detailCategorySelect").value),
             piStory: document.getElementById("piStory").value,
-            colorIds: Array.from(document.querySelectorAll("#colorInputContainer input"))
+            colorIds: Array.from(document.querySelectorAll("#colorInputContainer .color-id-input"))
                 .map(input => parseInt(input.value))
                 .filter(value => !isNaN(value)),
             sizeIds: Array.from(document.querySelectorAll("#sizeInputContainer input"))
-                .map(input => parseInt(input.dataset.sizeId))  // 사이즈 ID를 사용하도록 변경
+                .map(input => parseInt(input.dataset.sizeId))
                 .filter(value => !isNaN(value)),
             materialIds: Array.from(document.querySelectorAll("#selectedMaterial"))
                 .map(input => parseInt(input.getAttribute('data-material-id')))
                 .filter(value => !isNaN(value)),
             mainInfos: Array.from(document.querySelectorAll("#inputContainer input"))
                 .map(input => input.value)
-                .filter(value => value !== "")
+                .filter(value => value !== ""),
+            productDetailInfo: {
+                pdiHeight: parseInt(document.getElementById("pdiHeight").value),
+                pdiSize: parseInt(document.getElementById("pdiSize").value)
+            }
         };
 
         // 이미지 파일 추가
@@ -400,18 +404,24 @@ function previewImages() {
 
     // 선택된 색상을 부모 창의 색상 필드에 추가
     function updateColors(selectedColors) {
-        const colorInputContainer = document.getElementById("colorInputContainer");
-        colorInputContainer.innerHTML = ""; // 기존의 input 필드를 모두 지웁니다.
+    const colorInputContainer = document.getElementById("colorInputContainer");
+    colorInputContainer.innerHTML = ""; // 기존의 input 필드를 모두 지웁니다.
 
-        selectedColors.forEach(color => {
-            const newInput = document.createElement("input");
-            newInput.type = "text";
-            newInput.value = color;
-            newInput.className = "form-control mb-2";
-            newInput.readOnly = true;
-            colorInputContainer.appendChild(newInput);
-        });
-    }
+    selectedColors.forEach(color => {
+        const newInput = document.createElement("input");
+        newInput.type = "hidden";
+        newInput.value = color.id;  // 컬러 ID를 저장
+        newInput.className = "color-id-input";
+        colorInputContainer.appendChild(newInput);
+
+        const colorNameInput = document.createElement("input");
+        colorNameInput.type = "text";
+        colorNameInput.value = color.name;  // 컬러 이름만 표시
+        colorNameInput.className = "form-control mb-2";
+        colorNameInput.readOnly = true;
+        colorInputContainer.appendChild(colorNameInput);
+    });
+}
 
 
 
